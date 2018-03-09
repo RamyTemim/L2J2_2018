@@ -1,0 +1,33 @@
+h1 {
+  float: left;
+  background-color: darkred;
+  text-align: center;
+  font-size: 35px;
+  text-shadow: 3px 3px 3px grey;
+  width: 25%;
+  padding: 10px 0px 10px 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  margin-top: 33px;
+  margin-left: 35px;
+
+}
+
+img{
+  float:left;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+header {
+  background-color: rgb(254,254,226) ;
+  font-family : Helvetica, Arial, sans-serif;
+  height: 125px;
+  border-radius: 20px;
+
+
+}
+
+
