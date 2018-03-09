@@ -1,0 +1,26 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/*
+*.iml
+*.iws
+*.war
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# Config
+/build
+/local.properties
+.gradle
+/.idea/
+/target/
+/.idea/workspace.xml
+/out/
