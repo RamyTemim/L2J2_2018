@@ -10,7 +10,7 @@ public class SudokuApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SudokuApplication.class, args);
 
-		GrilleSudoku test2 = new GrilleSudoku();
+		MethodSudoku test2 = new MethodSudoku();
 
 		int i = 0;
 

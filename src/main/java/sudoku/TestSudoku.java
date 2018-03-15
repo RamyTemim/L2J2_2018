@@ -4,19 +4,14 @@ public class TestSudoku {
 
     public static void main (String[] argvs) {
 
-        GrilleSudoku test2 = new GrilleSudoku();
+        MethodSudoku test2 = new MethodSudoku();
+        GenerateGrid test = new GenerateGrid();
 
         test2.ini();
-       /* for(int i=1 ; i<81 ; i++) {
-
-        }*/
         test2.displayGrid();
 
+        test.generateGrid( test2 );
 
-
-       test2.generateGrid();
-
-       test2.displayGrid();
 
 
     }

@@ -4,7 +4,9 @@ import lombok.Value;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping("/sudoku")
 @Controller
 class FirstController {
 
@@ -14,7 +16,12 @@ class FirstController {
         this.appName = appName;
     }
 
-    @GetMapping("/")
+    @GetMapping("/generateGrille")
+    public String homePage(Model model) {
+        model.addAttribute("appName", appName);
+        return "home";
+
+    @GetMapping("/solveGrille")
     public String homePage(Model model) {
         model.addAttribute("appName", appName);
         return "home";
