@@ -62,7 +62,7 @@ public class Case {
     }
 
     //méthode qui affiche une case
-    //retourne une Case Minée si MineCase vaut true ,"c'est bon" sinon
+    //retourne une Case Minée si MineCase vaut true
 
 
     @Override
@@ -71,5 +71,6 @@ public class Case {
         else if (DecouvertCase != true) return "?";
         else if (get_mine() == true) return "X";
         else if(NbMineProximite > 0)return ""+NbMineProximite;
-else return "." ;
-}}
+        else return "." ;
+}
+}
