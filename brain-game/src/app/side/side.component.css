@@ -1,0 +1,22 @@
+aside {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: brown;
+  width: 20%;
+  border-radius: 20px;
+  float: left;
+  margin-top: 2px;
+  padding-bottom: 40%;
+  margin-bottom: 100px;
+
+}
+
+h2 {
+  margin-left: 9px;
+
+}
+
+li:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
