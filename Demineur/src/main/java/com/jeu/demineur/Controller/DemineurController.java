@@ -17,7 +17,7 @@ public class DemineurController {
     public String getGrilleDemineur() {
         Grille test = new Grille();
         test.initialiser();
-        System.out.println(test.toString());
-        return "getGrilleDemineur";
+
+        return test.toString();
     }
 }
