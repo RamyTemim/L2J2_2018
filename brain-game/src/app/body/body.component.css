@@ -1,0 +1,47 @@
+body {
+  float: right;
+  background-color: bisque;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  width: 995px;
+  margin-top: 2px;
+  padding-bottom: 60%;
+  font-family : Helvetica, Arial, sans-serif;
+}
+
+p {
+  margin-left: 5px;
+}
+
+h1 {
+
+  margin-left: 5px;
+  font-size: 45px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-right: 300px;
+  padding-bottom: 30px;
+}
+
+#image {
+  margin-left: 100px;
+}
+ #image:hover{
+   width: 155px;
+   height: 155px;
+   cursor: pointer;
+   border-style: solid;
+   border-color: white;
+
+ }
+
+ #img2 {
+   float:left;
+ }
+
+ div {
+   background-color: darkorchid;
+   border-radius: 20px;
+   padding: 13%;
+   display: block;
+ }
