@@ -16,14 +16,18 @@ class FirstController {
         this.appName = appName;
     }
 
-    @GetMapping("/generateGrille")
+    @GetMapping("/generateGrid")
+    public String homePage(Model model) {
+        model.addAttribute( "appName", appName );
+        return "home";
+
+    }
+
+   /* @GetMapping("/solveGrille")
     public String homePage(Model model) {
         model.addAttribute("appName", appName);
         return "home";
 
-    @GetMapping("/solveGrille")
-    public String homePage(Model model) {
-        model.addAttribute("appName", appName);
-        return "home";
-    }
+    }*/
+
 }
