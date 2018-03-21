@@ -1,0 +1,28 @@
+body {
+  width: 995px;
+  float: right;
+  background-color: rosybrown;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  margin-top: 2px;
+  font-family : Helvetica, Arial, sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+#jeu {
+  border-style: solid;
+  border-color: chartreuse;
+  width: 60%;
+  padding: 200px 30px 200px 30px;
+  margin: auto;
+  margin-bottom: 50px;
+
+}
+
+#regle {
+  background-color: dodgerblue;
+  border-style: solid;
+}
