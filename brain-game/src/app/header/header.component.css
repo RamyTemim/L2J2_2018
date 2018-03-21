@@ -11,6 +11,7 @@ h1 {
   border-radius: 20px;
   margin-top: 33px;
   margin-left: 35px;
+  cursor: pointer;
 
 }
 
@@ -19,10 +20,12 @@ img{
   border-radius: 20px;
   border-style: solid;
   border-width: 1px;
+  cursor: pointer;
 }
 
 header {
-  background-color: rgb(254,254,226) ;
+  background-color: brown;
+  /*background-color: rgb(254,254,226) ;*/
   font-family : Helvetica, Arial, sans-serif;
   height: 125px;
   border-radius: 20px;
