@@ -22,7 +22,17 @@ h1{
 
 }
 
+#bouton{
+  text-align: center;
+  background-color: brown;
+
+}
+
 #regle {
   background-color: dodgerblue;
   border-style: solid;
+}
+
+button {
+  cursor: pointer;
 }

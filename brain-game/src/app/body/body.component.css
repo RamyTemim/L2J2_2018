@@ -25,6 +25,7 @@ h1 {
 
 #image {
   margin-left: 100px;
+  position: absolute;
 }
  #image:hover{
    width: 155px;
@@ -40,8 +41,15 @@ h1 {
  }
 
  div {
+   position: relative;
    background-color: darkorchid;
    border-radius: 20px;
    padding: 13%;
    display: block;
+   width: 550px;
+   margin-left: 50px;
+ }
+
+ div button {
+   cursor: pointer;
  }
