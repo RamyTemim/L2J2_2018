@@ -1,9 +1,5 @@
 package com.jeu.demineur;
-
 import com.fasterxml.jackson.databind.Module;
-
-
-
 public class Demineur {
     private int NiveauFacile = 1;
     private int NiveauMoyen = 2;

@@ -68,7 +68,7 @@ public class Case {
     @Override
     public String toString() {
         if (DrapeauSurCase) return "!";
-        else if (DecouvertCase != true) return "?";
+        else if (DecouvertCase != false) return "?";
         else if (get_mine() == true) return "X";
         else if(NbMineProximite > 0)return ""+NbMineProximite;
         else return "." ;

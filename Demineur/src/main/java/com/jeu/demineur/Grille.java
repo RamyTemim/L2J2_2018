@@ -18,7 +18,7 @@ public static int nbMaxLigne = 16;
 public static int nbMaxColonne = 30;
 public static int nbMaxMine = 99;
 
-private Case [][] grille ;
+public Case [][] grille ;
 private int NbLigne;
 private int NbColonne;
 private int NbMine;
@@ -80,54 +80,38 @@ x indice de la ligne de la case
 y indice de la colonne de la case
 retourne le nombre de mine à proximité */
 
-        private void nbMinesProxCase ( int x, int y){
+        private int nbMinesProxCase ( int x, int y){
             for (int i = x - 1; i <= x + 1; i++) {
                 for (int j = y - 1; j <= y + 1; j++) {
                     if (i >= 0 && i < NbLigne && j >= 0 && j < NbColonne) {
                         if (grille[i][j].get_mine()) NbMine++;
                     }
                 }
-            }
+            }return NbMine;
         }
         public void decouvrirCase ( int x, int y){
-                grille[x][y].decouvrir();
+
+            grille[x][y].decouvrir();
+            }
+            public Case get_Case(int x,int y){
+            return grille[x][y];
             }
 
 public void decouvrirAutour(int x , int y){
             if(grille[x][y].get_NbMineProximite()==0){
-                for(int i=-1;i<=1;i++){
-                    if ((x + 1) >= 0 && (x + i) < NbLigne &&(y + 1) >= 0 && (y + -1) < NbColonne ){
+                for(int i=-1;i<=1;i++){ for (int j=-1;j<=1;j++){
+                    if ((x + i) >= 0 && (x + i) < NbLigne &&(y + j) >= 0 && (y + j) < NbColonne ){
                         if (grille[x + i][y + i].get_NbMineProximite() == 0 &&
-                                !grille[x + i][y + -1].get_decouvert() &&
-                                !grille[x + i][y + -1].get_mine()
+                                !grille[x + i][y + j].get_decouvert() &&
+                                !grille[x + i][y + j].get_mine()
                                 ) {
-                            decouvrirCase(x + i, y + -1);
-                            decouvrirAutour(x + i, y + -1);
-                        } else if (!grille[x + i][y + -1].get_mine() && !grille[x + i][y + -1].get_decouvert()) {
-                            decouvrirCase(x + i, y + -1);
+                            decouvrirCase(x + i, y + j);
+                            decouvrirAutour(x + i, y + j);
+                        } else if (!grille[x + i][y + j].get_mine() && !grille[x + i][y + j].get_decouvert()) {
+                            decouvrirCase(x + i, y + j);
                         }
                     }
-                    if ((x + 1) >= 0 && (x + i) < NbLigne && (y + 1) >= 0 && (y + 0) < NbColonne ){
-                        if (grille[x + i][y + i].get_NbMineProximite() == 0 &&
-                                !grille[x + i][y + 0].get_decouvert() &&
-                                !grille[x + i][y + 0].get_mine()
-                                ) {
-                            decouvrirCase(x + i, y + 0);
-                            decouvrirAutour(x + i, y + 0);
-                        } else if (!grille[x + i][y + 0].get_mine() && !grille[x + i][y + 0].get_decouvert()) {
-                            decouvrirCase(x + i, y + 0);
-                        }
-                    }
-                    if ((x + 1) >= 0 && (x + i) < NbLigne &&(y + 1) >= 0 && (y + 1) < NbColonne){
-                        if (grille[x + i][y + i].get_NbMineProximite() == 0 &&
-                                !grille[x + i][y + 1].get_decouvert() &&
-                                !grille[x + i][y + 1].get_mine()
-                                ) {
-                            decouvrirCase(x + i, y + 1);
-                            decouvrirAutour(x + i, y + 1);
-                        } else if (!grille[x + i][y + 1].get_mine() && !grille[x + i][y + 1].get_decouvert()) {
-                            decouvrirCase(x + i, y + 1);
-                        }
+
                     }
                 }}}
 //méthode affichage grille
