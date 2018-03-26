@@ -1,4 +1,6 @@
-package com.jeu.demineur;
+package Demineurclasses;
+
+import Demineurclasses.Demineur;
 
 public class Partie {
     private Demineur demineur = new Demineur();

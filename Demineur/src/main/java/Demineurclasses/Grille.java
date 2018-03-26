@@ -1,4 +1,6 @@
-package com.jeu.demineur;
+package Demineurclasses;
+import Demineurclasses.Case;
+
 import java.awt.Point;
 import java.util.Random;
 import java.util.Vector;
@@ -18,7 +20,7 @@ public static int nbMaxLigne = 16;
 public static int nbMaxColonne = 30;
 public static int nbMaxMine = 99;
 
-public Case [][] grille ;
+public Case[][] grille ;
 private int NbLigne;
 private int NbColonne;
 private int NbMine;

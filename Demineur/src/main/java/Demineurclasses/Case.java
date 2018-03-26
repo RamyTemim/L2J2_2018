@@ -1,11 +1,16 @@
-package com.jeu.demineur;
+package Demineurclasses;
 
 public class Case {
     private boolean DrapeauSurCase = false; //True si il y a un drapeau sur la case;
     private Boolean DecouvertCase = false; // True si la case est découverte
     private Boolean MineCase = false; //True si la case est minée
     private int NbMineProximite; //nombre de mine a proximité
-
+public Case(){
+    this.DrapeauSurCase = DrapeauSurCase;
+    this.DecouvertCase = DecouvertCase;
+    this.MineCase = MineCase;
+    this.NbMineProximite = NbMineProximite;
+}
     public Case(Boolean mineCase) {
         MineCase = mineCase;
     }

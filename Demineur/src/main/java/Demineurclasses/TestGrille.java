@@ -1,4 +1,7 @@
-package com.jeu.demineur;
+package Demineurclasses;
+
+import Demineurclasses.Case;
+import Demineurclasses.Grille;
 
 public class TestGrille {
     public static void main (String[] args){
