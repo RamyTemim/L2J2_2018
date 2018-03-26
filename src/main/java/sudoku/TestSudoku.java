@@ -7,13 +7,22 @@ public class TestSudoku {
 
         MethodSudoku test2 = new MethodSudoku();
         GenerateGrid test = new GenerateGrid();
-
+        GameGrid gg = new GameGrid(test2 , test );
 
 
 
         test.generateGrid( test2 );
 
-        test2.displayGrid();
+        System.out.println(test2.displayGrid());
+
+        gg.hideCase();
+        System.out.println(gg.displayGameGrid());
+        System.out.println(gg.displaySoltion());
+
+
+
+
+
 
     }
 }
@@ -22,6 +31,3 @@ public class TestSudoku {
 
 
 
-
-
-//test2.ini();
