@@ -15,9 +15,9 @@ public class MethodSudoku {
 
 
     //Constructor
-    public MethodSudoku() {
-       this.grille = new ArrayList <> ();
-     }
+    MethodSudoku() {
+        this.grille = new ArrayList <> ();
+    }
 
 
 
@@ -28,7 +28,15 @@ public class MethodSudoku {
     /****************** Getter and Setter ***********************/
 
 
-        //Setter
+    /**
+     *
+     * Initialize an ArrayList with a tab for input
+     *      (to make run test Junit)
+     *
+     * Setter
+     *
+     * @param e tab of int
+     */
 
     public void setGrid ( int [] e){
 
@@ -36,16 +44,21 @@ public class MethodSudoku {
 
             this.grille.add(e[i]);
 
-            System.out.println(this.grille.get(i));
 
         }
 
     }
 
 
-
-
-        //Getter
+    /**
+     *
+     * Get back value of element at index i
+     *
+     * Getter
+     *
+     * @param i index of case
+     * @return value of i
+     */
 
     public int getGrid(int i) {
 
@@ -67,9 +80,16 @@ public class MethodSudoku {
     /****************** Checking ***********************/
 
 
-        //Line
+                //Line
 
-    //Check if already on line
+    /**
+     *
+     * Check if already on line
+     *
+     * @param i index of case
+     * @param num number to test
+     * @return boolean (true = not already on line)
+     */
     public boolean availableLine(int i, int num) {
 
 
@@ -79,7 +99,7 @@ public class MethodSudoku {
         for (int m = k; (m < grille.size() - 1) ; m++) {
 
             if(this.grille.get(m) == num) return false;
-            
+
         }
 
         return true;
@@ -90,9 +110,16 @@ public class MethodSudoku {
 
 
 
-        //Column
+                //Column
 
-    //Return the first index of a column
+    /**
+     *
+     * Return the first index of a column
+     *
+     * @param cel index of case
+     * @return index of 1st case on column
+     *
+     */
     public int getFirstindexCol (int cel) {
 
         while(cel >= 9 ) cel -= 9;
@@ -101,8 +128,15 @@ public class MethodSudoku {
     }
 
 
-
-    //Check if already on column
+    /**
+     *
+     * Check if already on column
+     *
+     * @param i index of case
+     * @param nb number to test
+     * @return boolean (true = not already on column)
+     *
+     */
     public boolean availableColumn(int i, int nb) {
 
         int j = getFirstindexCol( i );
@@ -131,9 +165,15 @@ public class MethodSudoku {
 
 
 
-        //Block
+                //Block
 
-    //Return the first index of a block
+    /**
+     *
+     * Return the first index of a block
+     *
+     * @param cel index of case
+     * @return index of 1st case on block
+     */
     public int firstindexOfBloc (int cel) {
 
         int firstColumn = cel - (cel%3);
@@ -147,29 +187,37 @@ public class MethodSudoku {
     }
 
 
-
-    //Check if already in bloc
+    /**
+     *
+     * Check if already in bloc
+     *
+     *
+     * @param i index of case
+     * @param nb number to test
+     * @return boolean (true = not already on block)
+     *
+     */
     public boolean availableBloc(int i, int nb) {
         int k = firstindexOfBloc( i );
         int l = k + 27;
 
 
 
-            while ( k < l   &&   k < grille.size() - 1 ) {
+        while ( k < l   &&   k < grille.size() - 1 ) {
 
-                int n = k;
-                int h = k + 3;
+            int n = k;
+            int h = k + 3;
 
-                while( n < h && n < grille.size() - 1 ){
+            while( n < h && n < grille.size() - 1 ){
 
-                    if(this.grille.get(n) == nb) return false;
-                    n++;
-
-                }
-
-                k += 9;
+                if(this.grille.get(n) == nb) return false;
+                n++;
 
             }
+
+            k += 9;
+
+        }
 
 
         return true;
@@ -182,14 +230,23 @@ public class MethodSudoku {
 
 
 
-        // Block , column and line
+                // Block , column and line
 
-    //Check that number can be placed on line, column and bloc
+    /**
+     *
+     * Check that number can be placed on line, column and bloc
+     *
+     *
+     *
+     * @param i index of case
+     * @param nb number to test
+     * @return boolean (true = it's possible to place it)
+     *
+     *
+     */
     public boolean checkNumber(int i, int nb) {
 
-        boolean res = (availableLine( i, nb ) && availableColumn( i, nb ) && availableBloc( i, nb ));
-
-        return res;
+        return (availableLine( i, nb ) && availableColumn( i, nb ) && availableBloc( i, nb ));
 
     }
 
@@ -198,17 +255,27 @@ public class MethodSudoku {
 
 
 
+                // Idem + for all numbers
 
-        // Idem + for all numbers
 
-    //Check if it possible to placed any number between 1 and 9
+
+    /**
+     *
+     * Check if it possible to placed any number between 1 and 9
+     *
+     *
+     * @param i index of case to check
+     * @return boolean (true = it's possible)
+     *
+     *
+     */
     public boolean isPossible(int i) {
 
 
         for (int num = 1; num < 10; num++) {
 
             if ((checkNumber( i, num ))) {
-               return true;
+                return true;
             }
 
         }
@@ -222,12 +289,7 @@ public class MethodSudoku {
 
     public boolean checkGrid () {
 
-        if((grille.contains( 0 )) ) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return (!grille.contains( 0 ));
     }
 
 
@@ -240,8 +302,13 @@ public class MethodSudoku {
     /****************** Creating & Displaying ***********************/
 
 
-
-    //Generates a random number between 1 and 9
+    /**
+     *
+     * Generates a random number between 1 and 9
+     *
+     *
+     * @return number
+     */
     public int generateNb() {
 
         return (int) (Math.random() * 9) + 1;
@@ -249,11 +316,13 @@ public class MethodSudoku {
     }
 
 
-
-
-
-
-    //Generates an element which can be placed
+    /**
+     *
+     *
+     * Generates an element which can be placed
+     *
+     *
+     */
     public void generateCase() {
 
         int i;
@@ -280,21 +349,23 @@ public class MethodSudoku {
     }
 
 
-
-
-
-
-
-    //Display Sudoku puzzle
+    /**
+     *
+     * Display an ArrayList -> to run Junit test
+     *
+     *
+     *
+      * @return String contains elements of ArrayList
+     */
     public String displayGrid( ) {
 
         String result =" ";
         for(int i=0 ; i <= grille.size() - 9  ; i +=9) {
 
-                result += this.grille.get( i     ) + " "+this.grille.get( i + 1 ) + " "+this.grille.get( i + 2 ) + "   "+
-                          this.grille.get( i + 3 ) + " "+this.grille.get( i + 4 ) + " "+this.grille.get( i + 5 ) + "   "+
-                          this.grille.get( i + 6 ) + " "+this.grille.get( i + 7 ) + " "+this.grille.get( i + 8 ) + "   ";
-                result += " \n ";
+            result += this.grille.get( i     ) + " "+this.grille.get( i + 1 ) + " "+this.grille.get( i + 2 ) + "   "+
+                      this.grille.get( i + 3 ) + " "+this.grille.get( i + 4 ) + " "+this.grille.get( i + 5 ) + "   "+
+                      this.grille.get( i + 6 ) + " "+this.grille.get( i + 7 ) + " "+this.grille.get( i + 8 ) + "   ";
+            result += " \n ";
 
 
 
@@ -322,9 +393,12 @@ public class MethodSudoku {
     /****************** Methods of Arraylist ***********************/
 
 
-
-        // return Arraylist.size()
-
+    /**
+     *
+     * Getter for method ArrayList.size()
+     *
+     * @return size of ArrayList
+     */
     public int sizeGrid (){
 
         return this.grille.size();
@@ -334,9 +408,13 @@ public class MethodSudoku {
 
 
 
-
-        // Arraylist.add()
-
+    /**
+     *
+     * Setter for method ArrayList.add( int number)
+     *
+     *   ADD
+     *
+     */
     public void addGrid (int number) {
 
         this.grille.add( number );
@@ -347,32 +425,14 @@ public class MethodSudoku {
 
 
 
-        // Arraylist.add(Index , Element)
 
-    public void addGrid (int index , int number) {
-
-        this.grille.add( index , number );
-
-    }
-
-
-
-
-        // Arraylist.set(Index , Element)
-
-    public void setGrid ( int index , int number) {
-
-        this.grille.set(index , number);
-
-    }
-
-
-
-
-
-
-        // Arraylist.remove()
-
+    /**
+     *
+     * Setter for method ArrayList.remove( int index)
+     *
+     *  REMOVE
+     *
+     */
     public void removeElement (int i) {
 
         this.grille.remove(i);
@@ -382,6 +442,18 @@ public class MethodSudoku {
 
 
 
+
+
+    /**
+     *
+     * Test if list contains element in param
+     *
+     *
+     * @param e index of case
+     * @return
+     *
+     *
+     */
     public boolean containsElement (int e) {
 
         return this.grille.contains(e);
@@ -389,27 +461,20 @@ public class MethodSudoku {
     }
 
 
-
-
-
-    public String toStringList (ArrayList e) {
-        return e.toString();
-    }
-
-
-
-
-    //Initialize an ArrayList
-    public void ini () {
-
-        for(int i = 0 ; i < 81 ; i++) {
-            this.grille.add( i , 0 );
-        }
-
-    }
-
-
- //Replace an element by an other
+    /**
+     *
+     *
+     * Set an element of the list
+     *
+     *
+     *    SET
+     *
+     * @param i index of case to set element
+     *
+     * @param num new value of case i
+     *
+     *
+     */
     public void replaceElement (int i , int num) {
 
         this.grille.set(i , num);

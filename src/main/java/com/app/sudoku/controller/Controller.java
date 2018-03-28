@@ -4,7 +4,7 @@ package com.app.sudoku.controller;
 import org.springframework.web.bind.annotation.*;
 import sudoku.GameGrid;
 import sudoku.GenerateGrid;
-import sudoku.MethodSudoku;
+
 
 import java.util.ArrayList;
 
@@ -15,54 +15,125 @@ import java.util.ArrayList;
 class FirstController {
 
 
-    private String sudoku;
-    private MethodSudoku ms;
     private GenerateGrid grid;
-    private GameGrid gameGrid = new GameGrid( ms, grid );
+    private GameGrid gameGrid;
+
+
 
     @GetMapping("/test")
-    public String test () {
+    public String test() {
         return "it's working";
     }
 
-    @GetMapping("/displayGrid")
-    public String display(GameGrid e) {
-    this.ms = new MethodSudoku();
-        this.ms.ini();
-        this.sudoku = ms.displayGrid();
-        return this.sudoku;
 
-    }
+    @GetMapping("/NewEasyGrid")
+    public ArrayList<Integer> newEasyGrid() {
 
-    @GetMapping("/generateGrid")
-    public String generate() {
-        this.ms = new MethodSudoku();
         grid = new GenerateGrid();
+        gameGrid = new GameGrid( grid );
+        this.grid.generateGrid();
 
-        grid.generateGrid(this.ms);
 
-        return this.ms.displayGrid();
+        return this.gameGrid.hideCase(1);
 
     }
+
+
+
+
+
+    @GetMapping("/NewMediumGrid")
+    public ArrayList<Integer> newMediumGrid() {
+
+        grid = new GenerateGrid();
+        gameGrid = new GameGrid( grid );
+
+        this.grid.generateGrid();
+
+
+        return this.gameGrid.hideCase(2);
+
+    }
+
+
+
+
+
+
+
+    @GetMapping("/NewHardGrid")
+    public ArrayList<Integer> newGrid() {
+
+        grid = new GenerateGrid();
+        gameGrid = new GameGrid( grid );
+
+        this.grid.generateGrid();
+
+
+        return this.gameGrid.hideCase(3);
+
+    }
+
+
+
+
+
+
+
 
     @GetMapping("/GameGrid")
-    public String gameGrid () {
+    public ArrayList<Integer> gameGrid() {
+
         grid = new GenerateGrid();
-        ms = new MethodSudoku();
+        gameGrid = new GameGrid( grid );
 
-        this.gameGrid.hideCase();
+        this.grid.generateGrid(  );
 
-       return gameGrid.displayGameGrid();
+        return gameGrid.hideCase(0);
 
     }
 
+
+
+
+
+
     @GetMapping("/SolutionGrid")
-    public String solutionGrid () {
-        grid = new GenerateGrid();
-        ms = new MethodSudoku();
+    public ArrayList <Integer> solutionGrid() {
+
+        return gameGrid.getClone();
+
+    }
 
 
-        return this.gameGrid.displaySoltion();
+
+
+
+
+
+    @GetMapping("/RestartGrid")
+    public ArrayList<Integer> restartGrid() {
+
+        return this.gameGrid.restartGameGrid();
+
+    }
+
+
+
+
+
+
+    @GetMapping("/TestArrayList")
+    public ArrayList<Integer> testArrayList() {
+
+        ArrayList<Integer> ar = new ArrayList<>();
+        ar.add( 5 );
+        ar.add( 2 );
+        ar.add( 4 );
+        ar.add( 1 );
+        ar.add( 8 );
+
+        return ar;
 
     }
 }

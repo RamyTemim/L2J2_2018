@@ -5,19 +5,35 @@ public class TestSudoku {
     public static void main (String[] argvs) {
 
 
-        MethodSudoku test2 = new MethodSudoku();
         GenerateGrid test = new GenerateGrid();
-        GameGrid gg = new GameGrid(test2 , test );
+        GameGrid gg = new GameGrid( test );
+
+
+        System.out.println("--------------   TEST (generate grid)   -------------");
+        test.generateGrid(  );
+        System.out.println(test.displayGenerateGrid());
 
 
 
-        test.generateGrid( test2 );
-
-        System.out.println(test2.displayGrid());
-
-        gg.hideCase();
+        System.out.println("--------------    TEST (level : easy)   --------------");
+        gg.easy();
         System.out.println(gg.displayGameGrid());
-        System.out.println(gg.displaySoltion());
+
+
+
+        System.out.println("--------------   TEST (level : medium)  -------------");
+        gg.medium();
+        System.out.println(gg.displayGameGrid());
+
+
+
+        System.out.println("--------------    TEST (level : hard)   -------------");
+        gg.hard();
+        System.out.println(gg.displayGameGrid());
+
+
+        System.out.println("--------------     TEST (solution)      -------------");
+        System.out.println(gg.displaySolution());
 
 
 

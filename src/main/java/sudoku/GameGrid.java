@@ -3,99 +3,196 @@ package sudoku;
 import java.util.ArrayList;
 
 
+
+
+
 public class GameGrid {
 
-    private MethodSudoku ms;
-    private GenerateGrid e;
-
     private ArrayList <Integer> clone;
+    private ArrayList<Integer> grid;
+    private ArrayList<Integer> solution;
+    private ArrayList<Integer> restart;
+
 
     // Constructor
 
-    public GameGrid (MethodSudoku ms , GenerateGrid e) {
-        this.ms = ms;
-        this.e = e;
-        this.clone = new ArrayList<>( );
+    public GameGrid (  GenerateGrid e ) {
+        this.clone = e.generateGrid();
+        this.grid = new ArrayList<>(  );
+        this.solution = new ArrayList<>(  );
+        this.restart = new ArrayList<>(  );
     }
 
 
 
+
+
+
     /**
+     *
+     *
+     * Initialize game grid
+     *
+     * If not empty -> remove grid and initialize
+     *
+     *
+     *
+     */
+    private void setGG() {
+
+        while(!(this.grid.isEmpty())) {
+            this.grid.remove( grid.size() - 1 );
+        }
+
+        for(int i = 0 ; i < 81 ; i++){
+            this.grid.add(this.clone.get( i ));
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+    /**
+     *
      *
      * Private method which create a clone of e.generateGrid() in an Arraylist
      *
+     *
      */
-    private void getClone() {
+    public ArrayList<Integer> getClone() {
 
-        for(int i = 0 ; i < 81 ; i++){
-            this.clone.add(e.getListForReturn( i ));
+        while(!(this.solution.isEmpty())) {
+            this.solution.remove( this.solution.size() - 1 );
         }
-        System.out.println(clone.toString());
+        for(int i = 0 ; i < 81 ; i++){
+            this.solution.add(this.clone.get( i ));
+        }
+
+        return solution;
     }
+
+
+
+
+
 
 
 
 
     /**
      *
+     *
+     *
      * Hide between 40 and 50 case of cloned grid
      *
-     * void method which set the private Arraylist "clone"
+     * void method which set the private ArrayList "clone"
+     *
+     *
+     *
      */
 
-    public ArrayList<Integer> hideCase () {
+    public ArrayList<Integer> hideCase(int level) {
 
-        getClone();
-        //int nb = (int) (Math.random() * 50) + 40;
-        int nb=40;
+
         ArrayList <Integer> listOfIndex = new ArrayList<>( );
+        int nb;
 
-        for(int i = 0; i < nb + 1; i++) {
+
+        switch (level) {
+
+            case 1 : this.setGG(); nb = 30; break;
+            case 2 : this.setGG(); nb = 40; break;
+            case 3 : this.setGG(); nb = 50; break;
+            default : this.setGG(); nb = 40; break;
+
+        }
+
+
+
+        for(int i = 0; i < nb ; i++) {
+
 
             int index = (int) (Math.random() * 80);
 
             while(listOfIndex.contains( index )) {
-
                 index = (int) (Math.random() * 80);
             }
 
             listOfIndex.add(index);
 
-            this.clone.set( index , 0);
+            grid.set( index , 0);
+
+
         }
 
-        System.out.println(clone.toString());
 
-        return(clone);
+
+
+
+        return this.grid;
     }
 
 
 
 
 
-    public String displayGameGrid() {
 
-        return e.displayGenerateGrid();
+
+
+
+
+
+    /**
+     *
+     * Get back the original game grid (before that player set it)
+     *
+     * @return ArrayList which contains elements of initial game grid
+     *
+     */
+    public ArrayList <Integer> restartGameGrid (){
+
+        for(int i = 0 ; i < 81 ; i++){
+            this.restart.add( this.grid.get( i ) );
+        }
+        return this.restart;
 
     }
 
-    public String displaySoltion() {
-        return displayClone();
-    }
 
 
 
 
-    public String displayClone( ) {
+
+
+
+
+
+    /**
+     *
+     *
+     * Display game grid : contains hides case -> represent by 0
+     *
+     * @return String of game grid
+     *
+     *
+     *
+     */
+    public String displayGameGrid( ) {
 
         String result =" ";
-        for(int i=0 ; i <= clone.size() - 9  ; i +=9) {
+        for(int i=0 ; i <= grid.size() - 9  ; i +=9) {
 
-            result += this.clone.get(   i   ) + " "+this.clone.get( i + 1 ) + " "+this.clone.get( i + 2 ) + "   "+
-                      this.clone.get( i + 3 ) + " "+this.clone.get( i + 4 ) + " "+this.clone.get( i + 5 ) + "   "+
-                      this.clone.get( i + 6 ) + " "+this.clone.get( i + 7 ) + " "+this.clone.get( i + 8 ) + "   ";
+            result += this.grid.get(   i   ) + " "+this.grid.get( i + 1 ) + " "+this.grid.get( i + 2 ) + "   "+
+                      this.grid.get( i + 3 ) + " "+this.grid.get( i + 4 ) + " "+this.grid.get( i + 5 ) + "   "+
+                      this.grid.get( i + 6 ) + " "+this.grid.get( i + 7 ) + " "+this.grid.get( i + 8 ) + "   ";
             result += " \n ";
-
 
 
             if ((i + 9) % 27 == 0) {
@@ -104,7 +201,48 @@ public class GameGrid {
 
         }
 
+        return result;
+    }
 
+
+
+
+
+
+
+
+
+
+    /**
+     *
+     *
+     *
+     * Display original grid : the solution
+     *
+     * @return String of solution grid
+     *
+     *
+     *
+     *
+     */
+    public String displaySolution( ) {
+
+        ArrayList<Integer> displaySolution = this.getClone();
+
+        String result =" ";
+        for(int i=0 ; i <= displaySolution.size() - 9  ; i +=9) {
+
+            result += displaySolution.get(   i   ) + " "+displaySolution.get( i + 1 ) + " "+displaySolution.get( i + 2 ) + "   "+
+                    displaySolution.get( i + 3 ) + " "+displaySolution.get( i + 4 ) + " "+displaySolution.get( i + 5 ) + "   "+
+                    displaySolution.get( i + 6 ) + " "+displaySolution.get( i + 7 ) + " "+displaySolution.get( i + 8 ) + "   ";
+            result += " \n ";
+
+
+            if ((i + 9) % 27 == 0) {
+                result += " \n ";
+            }
+
+        }
 
         return result;
     }
@@ -112,10 +250,68 @@ public class GameGrid {
 
 
 
-    public void chooseDifficulty () {
+
+
+
+
+
+
+
+
+    /***************************** Different levels for game grid *****************************/
+
+
+
+    /**
+     *
+     * Method to create a grid at level 1 : easy
+     *
+     */
+    public void easy () {
+
+        grid = hideCase( 1 );
+
+    }
+
+
+
+
+
+    /**
+     *
+     * Method to create a grid at level 2 : medium
+     *
+     */
+    public void medium () {
+
+        grid = hideCase( 2 );
+
+    }
+
+
+
+
+
+
+    /**
+     *
+     * Method to create a grid at level 3 : hard
+     *
+     */
+    public void hard () {
+
+        grid = hideCase( 3 );
 
 
     }
 
 
+
+
+
+
+
+
 }
+
+
