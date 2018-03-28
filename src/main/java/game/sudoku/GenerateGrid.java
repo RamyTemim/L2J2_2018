@@ -1,5 +1,7 @@
 
-package sudoku;
+package game.sudoku;
+
+import game.sudoku.MethodSudoku;
 
 import java.util.ArrayList;
 
@@ -36,11 +38,11 @@ public class GenerateGrid {
      *
      *
      *
-     * Method which generates a sudoku puzzle conforms
+     * Method which generates a game puzzle conforms
      *
      *
      *
-     * @return listForReturn an Arraylist which contains all element of the generate sudoku puzzle
+     * @return listForReturn an Arraylist which contains all element of the generate game puzzle
      *
      *
      *
@@ -51,7 +53,7 @@ public class GenerateGrid {
 
 
         ArrayList <Integer> al = new ArrayList<>(  );
-        ArrayList <Integer> lr = new ArrayList<>(  );
+        
 
         int nb;
 
@@ -135,8 +137,13 @@ public class GenerateGrid {
     }
 
 
-
-
+    /**
+     *
+     * Method which return generate grid as a String
+     *      -> to display the game grid
+     *
+     * @return String
+     */
     public String displayGenerateGrid () {
 
         return ms.displayGrid();

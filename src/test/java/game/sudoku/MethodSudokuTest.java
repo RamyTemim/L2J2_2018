@@ -1,11 +1,12 @@
-package sudoku;
+package game.sudoku;
 
+import game.sudoku.MethodSudoku;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class MethodSudokuTest {
 
-    //Déclaration d'un objet de la classe sudoku
+    //Déclaration d'un objet de la classe game
     private MethodSudoku grille = new MethodSudoku();
 
     //Initialisation d'un tableau d'entier qui sera attribué à l'objet

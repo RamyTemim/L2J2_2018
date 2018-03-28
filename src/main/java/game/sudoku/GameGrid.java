@@ -1,4 +1,4 @@
-package sudoku;
+package game.sudoku;
 
 import java.util.ArrayList;
 
@@ -144,7 +144,11 @@ public class GameGrid {
 
 
 
+public int getE (int i) {
 
+      return  this.grid.get( i );
+
+}
 
 
 

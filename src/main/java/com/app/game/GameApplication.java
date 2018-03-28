@@ -1,13 +1,14 @@
-package com.app.sudoku;
+package com.app.game;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class SudokuApplication {
+public class GameApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SudokuApplication.class, args);
+		SpringApplication.run( GameApplication.class, args);
 
 
 		/*MethodSudoku test2 = new MethodSudoku();

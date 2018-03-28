@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.App</groupId>
-	<artifactId>sudoku</artifactId>
+	<artifactId>game</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>sudoku</name>
-	<description>Demo project for Spring Boot</description>
+	<name>game</name>
+	<description>Project L2_J2 : "Brain Games"</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -61,11 +61,6 @@
 			<version>RELEASE</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.App</groupId>
-			<artifactId>sudoku</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -76,9 +71,14 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>1.5.10.RELEASE</version>
+        </dependency>
 
 
-	</dependencies>
+    </dependencies>
 
 
 	<build>

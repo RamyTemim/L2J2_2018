@@ -1,8 +1,11 @@
-package sudoku;
+/*package game.sudoku.testSudoku;
 
-public class TestSudoku {
+import game.sudoku.GameGrid;
+import game.sudoku.GenerateGrid;
 
-    public static void main (String[] argvs) {
+public class TestGame {
+
+   /* public static void main (String[] argvs) {
 
 
         GenerateGrid test = new GenerateGrid();
@@ -38,11 +41,11 @@ public class TestSudoku {
 
 
 
-
-
     }
 }
 
+
+*/
 
 
 

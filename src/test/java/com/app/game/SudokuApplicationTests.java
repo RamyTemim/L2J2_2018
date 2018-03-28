@@ -1,4 +1,4 @@
-package com.app.sudoku;
+package com.app.game;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

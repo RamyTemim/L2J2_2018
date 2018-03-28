@@ -1,7 +1,7 @@
 var configTestArray = {
     method: 'GET',
     data: null,
-    url: 'http://localhost:8080/sudoku/TestArrayList',
+    url: 'http://localhost:8080/game/TestArrayList',
     success: function (res) {
         alert('success');
         var response = JSON.parse(res);

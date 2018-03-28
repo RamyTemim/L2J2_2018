@@ -1,4 +1,4 @@
-package sudoku;
+package game.sudoku;
 
 import lombok.Data;
 
@@ -15,7 +15,7 @@ public class MethodSudoku {
 
 
     //Constructor
-    MethodSudoku() {
+    public MethodSudoku() {
         this.grille = new ArrayList <> ();
     }
 
