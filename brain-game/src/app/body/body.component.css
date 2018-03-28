@@ -1,12 +1,15 @@
 body {
   float: right;
-  background-color: bisque;
-  border-radius: 20px;
+  /*background-image: url("../../assets/fond_body2.jpg");*/
+  background: linear-gradient(grey,white);
   margin-bottom: 100px;
   width: 995px;
   margin-top: 2px;
-  padding-bottom: 60%;
+  padding-bottom: 48%;
   font-family : Helvetica, Arial, sans-serif;
+  color: white;
+  border-top-right-radius: 20px ;
+  border-bottom-right-radius: 20px;
 }
 
 p {
@@ -23,11 +26,14 @@ h1 {
   padding-bottom: 30px;
 }
 
-#image {
+.image {
   margin-left: 100px;
   position: absolute;
+  z-index: 1;
+  float: left;
 }
- #image:hover{
+
+ .image:hover{
    width: 155px;
    height: 155px;
    cursor: pointer;
@@ -36,20 +42,59 @@ h1 {
 
  }
 
- #img2 {
+ .img2 {
    float:left;
  }
 
- div {
+.resumer {
    position: relative;
    background-color: darkorchid;
    border-radius: 20px;
    padding: 13%;
    display: block;
-   width: 550px;
-   margin-left: 50px;
+   width: 350px;
+   margin-left: 80px;
+   margin-top: -20px;
  }
 
- div button {
+.resumer-block{
+  position: relative;
+  background-color: darkorchid;
+  border-radius: 20px;
+  padding: 13%;
+  display: block;
+  width: 350px;
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+.resumer-none{
+  position: relative;
+  background-color: darkorchid;
+  border-radius: 20px;
+  padding: 13%;
+  display: none;
+  width: 350px;
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+ button {
    cursor: pointer;
+   float: right;
+   width: 90px;
+   height: 35px;
+   border-radius: 10px;
+   margin-right: 100px;
+ }
+
+ .resumer p {
+   float: right;
+   margin-left: 50px;
+   margin-top: -90px;
+ }
+
+ .detail {
+   margin-top: 200px;
+
  }

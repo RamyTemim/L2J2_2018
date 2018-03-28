@@ -1,17 +1,19 @@
 h1 {
   float: left;
-  background-color: darkred;
+  /*background-image: url("../../assets/fond_head.jpg");*/
   text-align: center;
   font-size: 35px;
-  text-shadow: 3px 3px 3px grey;
+  text-shadow: 3px 3px 3px black;
   width: 25%;
   padding: 10px 0px 10px 0px;
-  border-style: solid;
-  border-width: 1px;
+  /*border-style: solid;
+  border-width: 1px;*/
   border-radius: 20px;
   margin-top: 33px;
   margin-left: 35px;
   cursor: pointer;
+  color: #F41615;
+  border-color: black;
 
 }
 
@@ -24,8 +26,7 @@ img{
 }
 
 header {
-  background-color: brown;
-  /*background-color: rgb(254,254,226) ;*/
+  background-image: url("../../assets/fond_head.jpg");
   font-family : Helvetica, Arial, sans-serif;
   height: 125px;
   border-radius: 20px;

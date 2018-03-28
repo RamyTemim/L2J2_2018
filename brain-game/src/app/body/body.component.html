@@ -6,30 +6,43 @@
 </h1>
 
 
-  <img  id="image" onclick="toggle(this);" width="150" height="150" alt="Sudoku" src="../../assets/sudoku.png" title="Sudoku">
+  <img  class="image" (click)="toggle()" width="150" height="150" alt="Sudoku" src="../../assets/sudoku.png" title="Sudoku">
 
-  <div id="resumer" >
+  <div [ngClass]="this.classOfResumer" >
 
   <p>Seriez-vous capable de résoudre nos sudoku ?</p>
   <button routerLink="/Sudoku">JOUER !</button>
 
   </div>
+
 <!--
-  <img  id="image" onclick="toggle(this);" width="150" height="150" alt="demineur" src="../../assets/demineur.png" title="Démineur">
+  <img  class="image" onclick="toggle();" width="150" height="150" alt="demineur" src="../../assets/demineur.png" title="Démineur">
+
+  <div class="resumer">
+
   <p>Seriez-vous capable de trouver toutes les bombes ?</p>
+    <br>
+    <br>
+    <br>
   <p>PS: si vous vous appelez Clark Kent ou que vous avez la vision à rayon X, ce jeu n'est pas fait pour vous !</p>
   <button routerLink="/Demineur">JOUER !</button>
 
+  </div>
+
 
 <br>
 <br>
 <br>
 <br>
 <br>
-<p>Plus de jeux à venir ne vous inquiétez pas tous nos développeurs travaillent nuit et jour pour vous créez des jeux FAIT MAISON</p>
 
-<img id="img2" width="120" alt="Attention !!" src="../../assets/attention.png" title="Attention !!">
+<div class="detail">
+<p>Plus de jeux à venir !!!!</p>
+<p>Ne vous inquiétez pas tous nos développeurs travaillent nuit et jour pour vous créez des jeux FAIT MAISON !!!</p>
+
+<img class="img2" width="120" alt="Attention !!" src="../../assets/attention.png" title="Attention !!">
 <p style="line-height:65px;">Fait maison certifié&trade; !</p>
+</div>
 -->
 
 </body>

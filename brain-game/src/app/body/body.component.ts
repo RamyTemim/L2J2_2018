@@ -9,50 +9,54 @@ export class BodyComponent implements OnInit {
 
   constructor() { }
 
+  public classOfResumer;
 
 
   ngOnInit() {
   }
 
+  //Rendre invisible l'encadrer du jeu
+  public fold() {
+    debugger;
+    //let a = document.getElementsByClassName("resumer");
+    this.classOfResumer = "resumer-none";
 
 
-}
-
-
-//Rendre invisible l'encadrer du jeu
-function fold()
-{
-  let a = document.getElementById("resumer");
-  a.style.display = "none";
-
-
-}
+  }
 
 //Rendre visible l'encadrer du jeu
-function unfold()
-{
-  let a = document.getElementById("resumer");
-  a.style.display = "block";
+  public unfold() {
+    let a = document.getElementsByClassName("resumer");
+    this.classOfResumer = "resumer-block";
 
-}
+  }
 
 //Rend visible ou invisible l'encadrer du jeu à chaque clique
-function toggle(h)
-{
-  let a = document.getElementById("resumer");
 
-  //a = h.nextElementSibling;
-  let x = getComputedStyle(a).display;
+  public toggle() {
+    debugger;
+    /*console.log(1111111);
+     let a = document.getElementsByClassName("resumer");
+     let x = getComputedStyle(a).display;
 
 
-  if (x == "block") {
+     if (x == "block") {
 
-    fold();
+       this.fold();
 
+     }
+     else {
+
+       this.unfold();
+
+     }
+     */
   }
-  else {
 
-    unfold();
 
-  }
+
 }
+
+
+
+

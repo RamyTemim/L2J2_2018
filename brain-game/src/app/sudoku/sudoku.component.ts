@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-sudoku',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class SudokuComponent implements OnInit {
 
   constructor() { }
+
+  //Grille du sudoku
+
 
   ngOnInit() {
   }
