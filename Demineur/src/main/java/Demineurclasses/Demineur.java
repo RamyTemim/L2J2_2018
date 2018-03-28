@@ -3,14 +3,14 @@ package Demineurclasses;
 import java.util.Random;
 import java.lang.String;
 
-public class LaClasse {
+public class Demineur {
     int mLargeur = 0; //Largeur de la grille
     int mHauteur = 0; //Hauteur de la grille
     int mMines = 0; //Nombre de mines de la grille
     String [][] grille; //Grille qui contient les différents éléments
 
     //Constructeur qui génére la grille selon le niveau de difficulté
-    public LaClasse(int niveau) {
+    public Demineur(int niveau) {
         //Cas du niveau 1
        if (niveau ==1) {
            mHauteur = 8;
