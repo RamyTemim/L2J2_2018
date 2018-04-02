@@ -1,8 +1,7 @@
 nav {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: black;
-  /*background-image: url("../../assets/fond_side.png");*/
-  width: 20%;
+  background-color: #244F7E;
+  width: 17%;
   float: left;
   margin-top: 2px;
   padding-bottom: 40%;
@@ -21,7 +20,7 @@ h2 {
 
 li:hover {
   text-decoration: underline;
-  color: #0480FB;
+  color: #F5BA5D;
   cursor: pointer;
 }
 

@@ -1,8 +1,25 @@
 body {
-  width: 995px;
+  width: 1046px;
   float: right;
-  background-color: rosybrown;
-  border-radius: 20px;
+  background-color: #F5BA5D;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   margin-bottom: 100px;
+  margin-top: 2px;
   font-family : Helvetica, Arial, sans-serif;
+
+}
+
+h1 {
+
+  margin-left: 5px;
+  font-size: 45px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-right: 300px;
+  padding-bottom: 30px;
+}
+
+p {
+  margin-left: 5px;
 }

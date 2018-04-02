@@ -1,11 +1,13 @@
 body {
-  width: 995px;
+  width: 1046px;
   float: right;
-  background-color: rosybrown;
-  border-radius: 20px;
+  background-color: #F5BA5D;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   margin-bottom: 100px;
   margin-top: 2px;
   font-family : Helvetica, Arial, sans-serif;
+
 }
 
 h1 {
@@ -20,9 +22,10 @@ h1 {
 
 .jeu {
   border-style: solid;
-  border-color: chartreuse;
+  border-width: 1px;
+  background-color: #A9D0F5;
   width: 60%;
-  padding: 20px 30px 20px 30px;
+  padding: 20px 30px 10px 30px;
   margin: auto;
   margin-bottom: 50px;
 
@@ -30,17 +33,22 @@ h1 {
 
 .bouton{
   text-align: center;
-  background-color: brown;
+  float: right;
+  margin-top: -230px;
+  margin-right: -20px;
 
 }
 
 .regle {
-  background-color: dodgerblue;
+  background-color: #A9D0F5;
   border-style: solid;
+  border-color: #F5BA5D;
+  border-bottom-right-radius: 20px;
 }
 
 button {
   cursor: pointer;
+  width: 100px;
 }
 
 .grille {

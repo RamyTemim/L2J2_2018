@@ -12,7 +12,8 @@ h1 {
   margin-top: 33px;
   margin-left: 35px;
   cursor: pointer;
-  color: #F41615;
+  /*color: #F41615;*/
+  color: #FE9A2E;
   border-color: black;
 
 }
@@ -26,7 +27,8 @@ img{
 }
 
 header {
-  background-image: url("../../assets/fond_head.jpg");
+  background-image: url("../../assets/fond_head2.jpg");
+  background-size: 500px;
   font-family : Helvetica, Arial, sans-serif;
   height: 125px;
   border-radius: 20px;

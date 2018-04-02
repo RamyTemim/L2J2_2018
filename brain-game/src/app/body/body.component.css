@@ -1,13 +1,12 @@
 body {
   float: right;
-  /*background-image: url("../../assets/fond_body2.jpg");*/
-  background: linear-gradient(grey,white);
+  background-color: #A9D0F5;
   margin-bottom: 100px;
-  width: 995px;
+  width: 1046px;
   margin-top: 2px;
   padding-bottom: 48%;
   font-family : Helvetica, Arial, sans-serif;
-  color: white;
+  color: black;
   border-top-right-radius: 20px ;
   border-bottom-right-radius: 20px;
 }
@@ -48,10 +47,9 @@ h1 {
 
 .resumer {
    position: relative;
-   background-color: darkorchid;
+   background-color: #F5BA5D;
    border-radius: 20px;
    padding: 13%;
-   display: block;
    width: 350px;
    margin-left: 80px;
    margin-top: -20px;
@@ -86,7 +84,13 @@ h1 {
    height: 35px;
    border-radius: 10px;
    margin-right: 100px;
+   border-color: #A9D0F5;
  }
+
+ button:hover {
+   border-color: #244F7E;
+ }
+
 
  .resumer p {
    float: right;
