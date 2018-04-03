@@ -1,8 +1,9 @@
+/* le corps de la page sera identique pour tous afin d'avoir le meme style partout */
 body {
   float: right;
   background-color: #A9D0F5;
   margin-bottom: 100px;
-  width: 1046px;
+  width: 1030px;
   margin-top: 2px;
   padding-bottom: 48%;
   font-family : Helvetica, Arial, sans-serif;
@@ -57,7 +58,7 @@ h1 {
 
 .resumer-block{
   position: relative;
-  background-color: darkorchid;
+  background-color: #F5BA5D;
   border-radius: 20px;
   padding: 13%;
   display: block;
@@ -66,9 +67,10 @@ h1 {
   margin-top: -20px;
 }
 
+
 .resumer-none{
   position: relative;
-  background-color: darkorchid;
+  background-color: #F5BA5D;
   border-radius: 20px;
   padding: 13%;
   display: none;
@@ -76,6 +78,13 @@ h1 {
   margin-left: 80px;
   margin-top: -20px;
 }
+
+/*.image-block:hover {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+
+}*/
 
  button {
    cursor: pointer;
@@ -85,6 +94,7 @@ h1 {
    border-radius: 10px;
    margin-right: 100px;
    border-color: #A9D0F5;
+   border-style: solid;
  }
 
  button:hover {

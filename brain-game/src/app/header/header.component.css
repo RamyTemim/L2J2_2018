@@ -27,8 +27,9 @@ img{
 }
 
 header {
-  background-image: url("../../assets/fond_head2.jpg");
-  background-size: 500px;
+  /*background-image: url("../../assets/fond_head2.jpg");
+  background-size: 500px;*/
+  background-color: transparent;
   font-family : Helvetica, Arial, sans-serif;
   height: 125px;
   border-radius: 20px;

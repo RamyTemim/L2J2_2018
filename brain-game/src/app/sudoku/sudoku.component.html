@@ -3,139 +3,26 @@
 
 <!--Encadrer ou sera situé le jeu -->
 <section class="jeu">
+  <!--Encadrer ou sera situé le jeu -->
+  <section id="sudokuContainer" class="jeuSudoku">
 
-  <!--grille du sudoku-->
-  <div class="grille">
-  <div class="grille1">
 
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
 
-  <br>
 
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
+  </section>
 
-  <br>
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-  <br>
-  </div>
-
-  <div class="grille2">
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-  <br>
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-  <br>
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-  <br>
-  </div>
-
-  <div class="grille3">
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-  <br>
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-  <br>
-
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre1">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2" class="carre2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-  <input type="text" size="2">
-
-    <br>
-
-  </div>
-  </div>
 
   <div class="bouton">
 
-  <button>JOUER</button>
-    <br>
-  <button>Recommencer</button>
-    <br>
-    <button>Nouvelle grille</button>
-    <br>
-
+    <button id="btnValide">Valide griller</button>
+    <button id="btnSolution">Afficher solution</button>
+    <button id="btnNewGrid">Nouvelle grille</button>
+    <select title="Niveau" id="levelSudoku">
+      <option name="NewEasyGrid">Facile</option>
+      <option name="NewMediumGrid">Moyen</option>
+      <option name="NewHardGrid">Difficile</option>
+    </select>
   </div>
-
 
 </section>
 
