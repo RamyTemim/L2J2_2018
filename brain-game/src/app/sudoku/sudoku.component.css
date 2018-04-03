@@ -1,5 +1,5 @@
 body {
-  width: 1046px;
+  width: 1030px;
   float: right;
   background-color: #F5BA5D;
   border-bottom-right-radius: 20px;
@@ -51,33 +51,3 @@ button {
   width: 100px;
 }
 
-.grille {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.grille input {
-  font-size: 25px;
-  border-style: solid;
-  text-align: center;
-}
-
-.grille1 {
-  margin-bottom: 10px;
-}
-
-.grille2 {
-  margin-bottom: 10px;
-}
-
-.grille3 {
-  margin-bottom: 10px;
-}
-
-.carre1 {
-  margin-right: 10px;
-}
-
-.carre2{
-  margin-right: 10px;
-}

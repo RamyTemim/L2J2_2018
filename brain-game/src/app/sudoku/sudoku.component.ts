@@ -7,12 +7,6 @@ import {Component, OnInit} from '@angular/core';
 })
 
 
-
-
-
-
-
-
 export class SudokuComponent implements OnInit {
   constructor() {}
 
@@ -843,8 +837,6 @@ export class SudokuComponent implements OnInit {
       if (!e.target.classList.contains('selectable')) SudokuComponent.removeInput();
     }
   }
-
-
 
 
 

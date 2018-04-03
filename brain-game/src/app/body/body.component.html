@@ -6,19 +6,25 @@
 </h1>
 
 
-  <img  class="image" (click)="toggle()" width="150" height="150" alt="Sudoku" src="../../assets/sudoku.png" title="Sudoku">
+  <img  class="image" (click)="show = !show" width="150" height="150" alt="Sudoku" src="../../assets/sudoku.png" title="Sudoku">
 
- <div class="resumer" [ngClass]="this.classOfResumer">
+<br>
+
+<div class="resumer" *ngIf="show">
 
   <p>Serez-vous capable de résoudre nos sudoku ?</p>
   <button routerLink="/Sudoku">JOUER !</button>
 
-  </div>
+</div>
 
-<!--
-  <img  class="image" onclick="toggle();" width="150" height="150" alt="demineur" src="../../assets/demineur.png" title="Démineur">
+<br>
+<br>
+<br>
 
-  <div class="resumer">
+
+  <img  class="image" (click)="show1 = !show1" width="150" height="150" alt="demineur" src="../../assets/demineur.png" title="Démineur">
+
+  <div class="resumer" *ngIf="show1">
 
   <p>Seriez-vous capable de trouver toutes les bombes ?</p>
     <br>
@@ -43,7 +49,7 @@
 <img class="img2" width="120" alt="Attention !!" src="../../assets/attention.png" title="Attention !!">
 <p style="line-height:65px;">Fait maison certifié&trade; !</p>
 </div>
--->
+
 
 </body>
 
