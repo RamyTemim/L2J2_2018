@@ -2,10 +2,11 @@ package com.app.game.controller;
 
 
 
+import com.app.game.model.Grid;
+import game.demineur.ClasseDemineur;
 import org.springframework.web.bind.annotation.*;
 import game.sudoku.GameGrid;
 import game.sudoku.GenerateGrid;
-import game.demineur.LaClasse;
 
 
 import java.util.ArrayList;
@@ -27,18 +28,29 @@ class FirstController {
     private GameGrid gameGrid;
 
 
-    @GetMapping("/test")
-    public String test() {
-        return "it's working";
-    }
 
+    @PostMapping("/validateGrid")
+    public boolean valideGrid(@RequestBody Grid grid) {
+        ArrayList clone = gameGrid.getClone();
+        boolean res = true;
+        System.out.println("------- test grid -------");
+        for (int i = 0; i < grid.getArrayList().size(); i++) {
+            String crtClient = grid.getArrayList().get( i ).toString();
+            String crtGrid = clone.get( i ).toString();
+            System.out.println(crtClient + " " + crtGrid);
+            if (crtClient.equals( "?" ) || !crtClient.equals( crtGrid )) res = false;
+        }
+
+        System.out.println(res);
+        return res;
+    }
 
     @GetMapping("/NewEasyGrid")
     public ArrayList<Integer> newEasyGrid() {
 
         grid = new GenerateGrid();
         gameGrid = new GameGrid( grid );
-        this.grid.generateGrid();
+        grid.generateGrid();
 
 
         return this.gameGrid.hideCase( 1 );
@@ -130,47 +142,49 @@ class FirstController {
     @RestController
     @RequestMapping("/demineur")
     public class DemineurController {
-        /*Argument dans LaClasse() :
+
+        private ClasseDemineur grille;
+        /*Argument dans ClasseDemineur() :
          * 1 : niveau facile 8 x 8 10 mines
          * 2 : nvieau moyen 16 x 16 40 mines
          * 3 : niveau difficile 30 x 16 99 mines*/
 
-        @GetMapping("/niveauFacile")
 
+        @GetMapping("/niveauFacile")
         public String Facile() {
 
 
-            LaClasse facile = new LaClasse( 1 );
+           this.grille = new ClasseDemineur( 1 );
 
-            return "NIVEAU FACILE :" + facile.genererGrille();
+            return  this.grille.genererGrille();
         }
+
 
         @GetMapping("/niveauMoyen")
-
         public String Moyen() {
 
-            /*Argument dans LaClasse() :
+            /*Argument dans ClasseDemineur() :
              * 1 : niveau facile 8 x 8 10 mines
              * 2 : nvieau moyen 16 x 16 40 mines
              * 3 : niveau difficile 30 x 16 99 mines*/
 
-            LaClasse moyen = new LaClasse( 2 );
+            this.grille = new ClasseDemineur( 2 );
 
-            return "NIVEAU MOYEN:" + moyen.genererGrille();
+            return  this.grille.genererGrille();
         }
 
-        @GetMapping("/niveauDifficile")
 
+        @GetMapping("/niveauDifficile")
         public String Difficile() {
 
-            /*Argument dans LaClasse() :
+            /*Argument dans ClasseDemineur() :
              * 1 : niveau facile 8 x 8 10 mines
              * 2 : nvieau moyen 16 x 16 40 mines
              * 3 : niveau difficile 30 x 16 99 mines*/
 
-            LaClasse difficile = new LaClasse( 3 );
+            this.grille = new ClasseDemineur( 3 );
 
-            return "NIVEAU DIFFICILE :" + difficile.genererGrille();
+            return  this.grille.genererGrille();
         }
     }
 }

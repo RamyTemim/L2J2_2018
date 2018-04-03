@@ -20,6 +20,9 @@ public class MethodSudoku {
     }
 
 
+    public MethodSudoku(ArrayList <Integer> e) {
+        this.grille = e;
+    }
 
 
 
@@ -59,7 +62,6 @@ public class MethodSudoku {
      * @param i index of case
      * @return value of i
      */
-
     public int getGrid(int i) {
 
         return this.grille.get(i);
@@ -460,26 +462,6 @@ public class MethodSudoku {
 
     }
 
-
-    /**
-     *
-     *
-     * Set an element of the list
-     *
-     *
-     *    SET
-     *
-     * @param i index of case to set element
-     *
-     * @param num new value of case i
-     *
-     *
-     */
-    public void replaceElement (int i , int num) {
-
-        this.grille.set(i , num);
-
-    }
 
 
 

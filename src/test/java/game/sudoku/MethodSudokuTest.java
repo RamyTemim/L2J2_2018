@@ -25,8 +25,8 @@ public class MethodSudokuTest {
                          2, 0, 0,  0, 0, 0,  0, 0, 0};
 
 
-    private int[] tab2 = {1, 2, 3,  4, 8, 7,  6, 5, 9,
-                          8, 6, 5,  9, 1  };
+    private int[] tab2 = {0, 2, 3,  4, 8, 7,  6, 5, 9,
+                          8, 6, 5,  9, 1, 0};
 
 
 
@@ -41,6 +41,7 @@ public class MethodSudokuTest {
     public void availableLine() {
 
         grille.setGrid( tab2 );
+
         boolean a = grille.availableLine( 14, 7 );
         boolean b = grille.availableLine( 0, 2 );
 

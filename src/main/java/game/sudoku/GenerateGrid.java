@@ -53,7 +53,7 @@ public class GenerateGrid {
 
 
         ArrayList <Integer> al = new ArrayList<>(  );
-        
+
 
         int nb;
 
@@ -135,6 +135,16 @@ public class GenerateGrid {
         return this.listForReturn;
 
     }
+
+
+
+    public int getI(int i ){
+
+        return this.listForReturn.get( i );
+
+    }
+
+
 
 
     /**

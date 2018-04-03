@@ -1,11 +1,11 @@
-/*package game.sudoku.testSudoku;
+package game.sudoku.testSudoku;
 
 import game.sudoku.GameGrid;
 import game.sudoku.GenerateGrid;
 
 public class TestGame {
 
-   /* public static void main (String[] argvs) {
+    public static void main (String[] argvs) {
 
 
         GenerateGrid test = new GenerateGrid();
@@ -45,7 +45,7 @@ public class TestGame {
 }
 
 
-*/
+
 
 
 

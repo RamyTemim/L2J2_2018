@@ -3,14 +3,14 @@ package game.demineur;
 import java.util.Random;
 import java.lang.String;
 
-public class LaClasse {
-    int mLargeur = 0; //Largeur de la grille
-    int mHauteur = 0; //Hauteur de la grille
-    int mMines = 0; //Nombre de mines de la grille
-    String [][] grille; //Grille qui contient les différents éléments
+public class ClasseDemineur {
+    private int mLargeur = 0; //Largeur de la grille
+    private int mHauteur = 0; //Hauteur de la grille
+    private int mMines = 0; //Nombre de mines de la grille
+    private String [][] grille; //Grille qui contient les différents éléments
 
     //Constructeur qui génére la grille selon le niveau de difficulté
-    public LaClasse(int niveau) {
+    public ClasseDemineur(int niveau) {
         //Cas du niveau 1
         if (niveau ==1) {
             mHauteur = 8;
@@ -27,7 +27,8 @@ public class LaClasse {
             mLargeur=16;
             mMines =99;
         }
-//Generation de la grille
+
+        //Generation de la grille
         grille = new String[mHauteur][mLargeur];
         effacerGrille(); //Méthode qui réinitialise la grille
         placeMines(); //Méthode qui place les mines dans la grille
@@ -38,6 +39,8 @@ public class LaClasse {
     }
 
 
+
+
     public String placeMines() {
         int minesPlaced = 0; //Nombre de mines placées
         String mines = ""; //Initialisation du string
@@ -46,7 +49,7 @@ public class LaClasse {
             int x = random.nextInt(mLargeur); //genere et renvoie l'entier aléatoirement entre 0 et mLargeur
             int y = random.nextInt(mHauteur);////genere et renvoie l'entier aléatoirement entre 0 et mHauteur
 
-            if (grille[y][x] != "*") {
+            if (!grille[y][x].equals( "*" )) {
                 grille[y][x] = "*";
                 minesPlaced++; //incrémentation du nombre de mines
 
@@ -56,16 +59,14 @@ public class LaClasse {
         return mines; // retourne les mines
     }
 
-    public String effacerGrille() {
+    private void effacerGrille() {
 
-        String effacer ="";
         for (int y = 0; y < mHauteur; y++) {
             for (int x = 0; x < mLargeur; x++) {
-                grille[y][x] = " "; //affecte un vide
-                effacer += grille[y][x];
+                this.grille[y][x] = "-"; //affecte un vide
+
             }
         }
-        return  effacer;
     }
 
     public String genererGrille() {
@@ -73,12 +74,14 @@ public class LaClasse {
         for (int y = 0; y < mHauteur; y++) {
             for (int x = 0; x < mLargeur; x++) {
                 System.out.print(grille[y][x]);
-                generer += grille[y][x];
+
+                generer += grille[y][x]+",";
             }
             System.out.print("\n");
         }
         return  generer;
     }
+
     //Methode qui genere les chiffres selon le nombre de mines qu'il y a à proximité
     public String calculAstuce() {
         String astuce ="";
@@ -107,7 +110,7 @@ public class LaClasse {
         if (mines > 0) {
             return  String.valueOf(mines); //Convertit l'entier mines en String
         } else {
-            return " ";
+            return "0";
         }
     }
 
