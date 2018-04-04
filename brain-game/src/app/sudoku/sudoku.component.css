@@ -1,6 +1,8 @@
 body {
-  width: 1030px;
-  float: right;
+  width: 82%;
+  margin-left: 18%;
+  position: right;
+  position: absolute;
   background-color: #F5BA5D;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
@@ -34,9 +36,6 @@ h1 {
 .bouton{
   text-align: center;
   float: right;
-  margin-top: -230px;
-  margin-right: -20px;
-
 }
 
 .regle {

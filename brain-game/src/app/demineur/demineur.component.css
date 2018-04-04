@@ -1,6 +1,8 @@
 body {
-  width: 1030px;
-  float: right;
+  width: 82%;
+  margin-left: 18%;
+  position: right;
+  position: absolute;
   background-color: #F5BA5D;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
@@ -9,6 +11,7 @@ body {
   font-family : Helvetica, Arial, sans-serif;
 
 }
+
 
 h1 {
 
