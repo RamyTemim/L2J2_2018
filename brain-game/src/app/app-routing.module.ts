@@ -6,6 +6,7 @@ import {DemineurComponent} from "./demineur/demineur.component";
 import {SudokuComponent} from "./sudoku/sudoku.component";
 import {BodyComponent} from "./body/body.component";
 import {TeamComponent} from "./team/team.component";
+import {CompteurComponent} from "./compteur/compteur.component";
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'Demineur' , component: DemineurComponent },
   { path: 'Sudoku' , component: SudokuComponent },
   { path: 'Team' , component: TeamComponent},
+  { path: 'compteur', component: CompteurComponent},
 
 
 

@@ -13,6 +13,4 @@ export class DemineurComponent implements OnInit {
   }
 
 
-
-
 }

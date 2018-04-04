@@ -1,0 +1,53 @@
+body {
+  background-color:  #A9D0F5;
+  font-family : Helvetica, Arial, sans-serif;
+
+}
+
+button {
+  cursor: pointer;
+  width: 100px;
+  background-color: white;
+  border-radius: 10px;
+  border-style: none;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+select {
+  cursor: pointer;
+  width: 100px;
+  background-color: white;
+  border-radius: 10px;
+  border-style: none;
+  margin-left: 3px;
+}
+
+.bouton{
+  text-align: center;
+  float: right;
+}
+
+.compteur {
+  background-color: whitesmoke;
+  width: 97px;
+  height: 35px;
+  text-align: center;
+  border-style: double;
+  border-width: 4px;
+  margin-bottom: 10px;
+}
+
+.compteur p {
+  margin-top: 10px;
+}
+
+.jouer {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+}
+
+.b {
+  height: 25px;
+}

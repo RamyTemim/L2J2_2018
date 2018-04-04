@@ -9,8 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { SideComponent } from './side/side.component';
 import { BodyComponent } from './body/body.component';
 import { SudokuComponent } from './sudoku/sudoku.component';
-import { DemineurComponent } from './demineur/demineur.component';
+import { DemineurComponent} from './demineur/demineur.component';
 import { TeamComponent } from './team/team.component';
+import { CompteurComponent } from './compteur/compteur.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TeamComponent } from './team/team.component';
     BodyComponent,
     SudokuComponent,
     DemineurComponent,
-    TeamComponent
+    TeamComponent,
+    CompteurComponent,
   ],
   imports: [
     BrowserModule,
