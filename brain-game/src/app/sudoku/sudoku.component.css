@@ -4,8 +4,9 @@ body {
   position: right;
   position: absolute;
   background-color: #F5BA5D;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
+  /*border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;*/
   margin-bottom: 100px;
   margin-top: 2px;
   font-family : Helvetica, Arial, sans-serif;

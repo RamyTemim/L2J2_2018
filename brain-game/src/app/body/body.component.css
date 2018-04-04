@@ -18,8 +18,7 @@ body {
   position: right;
   position: absolute;
   background-color: #A9D0F5;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
   margin-bottom: 100px;
   margin-top: 2px;
   font-family : Helvetica, Arial, sans-serif;
@@ -103,6 +102,10 @@ h1 {
  }
 
  .detail {
-   margin-top: 200px;
-
+   margin-top: 500px;
  }
+
+.detail p {
+  font-size: 35px;
+}
+
