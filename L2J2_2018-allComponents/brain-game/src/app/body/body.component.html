@@ -1,0 +1,59 @@
+
+<body>
+
+<h1>
+  Accueil :
+</h1>
+
+
+  <img  class="image" (click)="show = !show" width="150" height="150" alt="Sudoku" src="../../assets/sudoku.png" title="Sudoku">
+
+<br>
+
+<div class="resumer" *ngIf="show">
+
+  <p>Serez-vous capable de résoudre nos sudokus ?</p>
+  <button routerLink="/Sudoku">JOUER !</button>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <img  class="image" (click)="show1 = !show1" width="150" height="150" alt="demineur" src="../../assets/demineur.png" title="Démineur">
+
+  <div class="resumer" *ngIf="show1">
+
+  <p>Seriez-vous capable de trouver toutes les bombes ?</p>
+    <br>
+    <br>
+    <br>
+  <p>PS: si vous vous appelez Clark Kent ou que vous avez la vision à rayon X, ce jeu n'est pas fait pour vous !</p>
+  <button routerLink="/Demineur">JOUER !</button>
+
+  </div>
+
+<div class="detail">
+
+<p>Plus de jeux à venir !!!!</p>
+<p>Ne vous inquiétez pas tous nos développeurs travaillent nuit et jour pour vous créer des jeux FAITS MAISON !!!</p>
+
+<img class="img2" width="190" alt="Attention !!" src="../../assets/attention.png" title="Attention !!">
+<p style="line-height:65px;">Fait maison certifié&trade; !</p>
+</div>
+
+
+
+
+
+</body>
+

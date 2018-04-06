@@ -1,0 +1,24 @@
+body {
+  width: 1030px;
+  float: right;
+  background-color: #F5BA5D;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  margin-top: 2px;
+  font-family : Helvetica, Arial, sans-serif;
+
+}
+
+h1 {
+
+  margin-left: 5px;
+  font-size: 45px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-right: 300px;
+  padding-bottom: 30px;
+}
+
+p {
+  margin-left: 5px;
+}

@@ -1,0 +1,40 @@
+h1 {
+  float: left;
+  /*background-image: url("../../assets/fond_head.jpg");*/
+  text-align: center;
+  font-size: 35px;
+  text-shadow: 3px 3px 3px black;
+  width: 25%;
+  padding: 10px 0px 10px 0px;
+  /*border-style: solid;
+  border-width: 1px;*/
+  border-radius: 20px;
+  margin-top: 33px;
+  margin-left: 35px;
+  cursor: pointer;
+  /*color: #F41615;*/
+  color: #FE9A2E;
+  border-color: black;
+
+}
+
+img{
+  float:left;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+header {
+  /*background-image: url("../../assets/fond_head2.jpg");
+  background-size: 500px;*/
+  background-color: transparent;
+  font-family : Helvetica, Arial, sans-serif;
+  height: 125px;
+  border-radius: 20px;
+
+
+}
+
+

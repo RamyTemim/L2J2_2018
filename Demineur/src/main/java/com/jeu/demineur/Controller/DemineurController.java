@@ -16,16 +16,16 @@ public class DemineurController {
 
     @GetMapping("/niveauFacile")
 
-    public String Facile() {
+    public String[][] Facile() {
 
 
         Demineur facile = new Demineur(1);
 
-        return facile.genererGrille();
+        return facile.affichage();
     }
     @GetMapping("/niveauMoyen")
 
-    public String Moyen() {
+    public String[][] Moyen() {
 
         /*Argument dans Demineur() :
          * 1 : niveau facile 8 x 8 10 mines
@@ -34,11 +34,11 @@ public class DemineurController {
 
         Demineur moyen = new Demineur(2);
 
-        return moyen.genererGrille();
+        return moyen.affichage();
     }
     @GetMapping("/niveauDifficile")
 
-    public String Difficile() {
+    public String[][] Difficile() {
 
         /*Argument dans Demineur() :
          * 1 : niveau facile 8 x 8 10 mines
@@ -47,7 +47,7 @@ public class DemineurController {
 
         Demineur difficile = new Demineur(3);
 
-        return difficile.genererGrille();
+        return difficile.affichage();
     }
 
 

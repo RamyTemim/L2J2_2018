@@ -1,18 +1,24 @@
 package Demineurclasses;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Random;
 import java.lang.String;
 
 public class Demineur {
-    int mLargeur = 0; //Largeur de la grille
-    int mHauteur = 0; //Hauteur de la grille
-    int mMines = 0; //Nombre de mines de la grille
-    String [][] grille; //Grille qui contient les différents éléments
+
+    private int mLargeur ; //Largeur de la grille
+    private int mHauteur = 0; //Hauteur de la grille
+    private int mMines = 0; //Nombre de mines de la grille
+    @JsonProperty
+    private String[][] grille; //Grille qui contient les différents éléments
 
     //Constructeur qui génére la grille selon le niveau de difficulté
-    public Demineur(int niveau) {
+
+    public Demineur( int niveau) {
         //Cas du niveau 1
-       if (niveau ==1) {
+        mLargeur = 0;
+        if (niveau ==1) {
            mHauteur = 8;
            mLargeur = 8;
            mMines =10;
@@ -27,16 +33,17 @@ public class Demineur {
            mLargeur=16;
            mMines =99;
        }
-//Generation de la grille
+    }
+    @JsonProperty
+    public String[][] affichage(){
         grille = new String[mHauteur][mLargeur];
         effacerGrille(); //Méthode qui réinitialise la grille
         placeMines(); //Méthode qui place les mines dans la grille
         genererGrille(); //Méthode qui génére la grille
         calculAstuce(); //Methode qui genere les chiffres selon le nombre de mines qu'il y a à proximité
 
-
+        return grille;
     }
-
 
     public String placeMines() {
         int minesPlaced = 0; //Nombre de mines placées
@@ -50,12 +57,11 @@ public class Demineur {
                 grille[y][x] = "*";
                 minesPlaced++; //incrémentation du nombre de mines
 
-                mines+=grille[y][x]; //remplit la grille de mines
+                mines += grille[y][x]; //remplit la grille de mines
             }
         }
         return mines; // retourne les mines
     }
-
     public String effacerGrille() {
 
         String effacer ="";
@@ -67,7 +73,6 @@ public class Demineur {
         }
         return  effacer;
     }
-
     public String genererGrille() {
         String generer ="";
         for (int y = 0; y < mHauteur; y++) {
@@ -79,6 +84,7 @@ public class Demineur {
         }
         return  generer;
     }
+
 //Methode qui genere les chiffres selon le nombre de mines qu'il y a à proximité
     public String calculAstuce() {
         String astuce ="";
@@ -91,7 +97,6 @@ public class Demineur {
             }
             return  astuce;
         }
-
 
     public String minesProximite(int y, int x) {
         int mines = 0;
@@ -112,7 +117,7 @@ public class Demineur {
     }
 
 //donne l'élement correspondant à l'indice x (ligne) y(ligne) de la case
-    //retourne 1 si il trouve la mine , 0 sinon
+//retourne 1 si il trouve la mine , 0 sinon
     public int mineAt(int y, int x) {
 
         if (y >= 0 && y < mHauteur && x >= 0 && x < mLargeur && grille[y][x] == "*") {

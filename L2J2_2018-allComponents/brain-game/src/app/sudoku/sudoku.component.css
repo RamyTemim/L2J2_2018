@@ -1,0 +1,53 @@
+body {
+  width: 82%;
+  margin-left: 18%;
+  position: right;
+  position: absolute;
+  background-color: #F5BA5D;
+  border-radius: 20px;
+  /*border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;*/
+  margin-bottom: 100px;
+  margin-top: 2px;
+  font-family : Helvetica, Arial, sans-serif;
+
+}
+
+h1 {
+
+  margin-left: 5px;
+  font-size: 45px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-right: 300px;
+  padding-bottom: 30px;
+}
+
+.jeu {
+  border-style: solid;
+  border-width: 1px;
+  background-color: #A9D0F5;
+  width: 60%;
+  padding: 20px 30px 10px 30px;
+  margin: auto;
+  margin-bottom: 50px;
+
+}
+
+.bouton{
+  text-align: center;
+  float: right;
+}
+
+.regle {
+  background-color: #A9D0F5;
+  border-style: solid;
+  border-color: #F5BA5D;
+  border-bottom-right-radius: 20px;
+}
+
+button {
+  cursor: pointer;
+  width: 100px;
+}
+
