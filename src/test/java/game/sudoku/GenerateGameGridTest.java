@@ -1,13 +1,11 @@
 package game.sudoku;
 
-import game.sudoku.GameGrid;
-import game.sudoku.GenerateGrid;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class GameGridTest {
+public class GenerateGameGridTest {
 
     @Test
     public void getClone() {
@@ -17,7 +15,7 @@ public class GameGridTest {
     @Test
     public void hideCase() {
         GenerateGrid e = new GenerateGrid();
-        GameGrid test = new GameGrid( e );
+        GenerateGameGrid test = new GenerateGameGrid( e );
         test.hideCase( 0 );
         int count=0;
 
@@ -45,7 +43,7 @@ public class GameGridTest {
     @Test
     public void restartGameGrid() {
         GenerateGrid e = new GenerateGrid();
-        GameGrid test = new GameGrid( e );
+        GenerateGameGrid test = new GenerateGameGrid( e );
 
 
         ArrayList<Integer> list = test.hideCase( 0 );
@@ -68,7 +66,7 @@ public class GameGridTest {
     @Test
     public void easy() {
         GenerateGrid e = new GenerateGrid();
-        GameGrid test = new GameGrid( e );
+        GenerateGameGrid test = new GenerateGameGrid( e );
         test.easy();
         int count=0;
 
@@ -101,7 +99,7 @@ public class GameGridTest {
     public void medium() {
 
         GenerateGrid e = new GenerateGrid();
-        GameGrid test = new GameGrid( e );
+        GenerateGameGrid test = new GenerateGameGrid( e );
         test.medium(  );
         int count=0;
 
@@ -135,7 +133,7 @@ public class GameGridTest {
     @Test
     public void hard() {
         GenerateGrid e = new GenerateGrid();
-        GameGrid test = new GameGrid( e );
+        GenerateGameGrid test = new GenerateGameGrid( e );
         test.hard(  );
         int count=0;
 

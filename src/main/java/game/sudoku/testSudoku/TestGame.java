@@ -1,6 +1,6 @@
 package game.sudoku.testSudoku;
 
-import game.sudoku.GameGrid;
+import game.sudoku.GenerateGameGrid;
 import game.sudoku.GenerateGrid;
 
 public class TestGame {
@@ -9,7 +9,7 @@ public class TestGame {
 
 
         GenerateGrid test = new GenerateGrid();
-        GameGrid gg = new GameGrid( test );
+        GenerateGameGrid gg = new GenerateGameGrid( test );
 
 
         System.out.println("--------------   TEST (generate grid)   -------------");

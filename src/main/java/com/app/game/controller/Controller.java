@@ -3,45 +3,44 @@ package com.app.game.controller;
 
 
 import com.app.game.model.Grid;
-import game.demineur.ClasseDemineur;
+import game.demineur.Demineur;
 import org.springframework.web.bind.annotation.*;
-import game.sudoku.GameGrid;
+import game.sudoku.GenerateGameGrid;
 import game.sudoku.GenerateGrid;
 
 
 import java.util.ArrayList;
 
 
-@CrossOrigin(origins = "*")
+
 
 
 /************************  Sudoku  ************************/
 
 
-
+@CrossOrigin(origins = "*")
 @RequestMapping("/sudoku")
 @RestController
 class FirstController {
 
 
     private GenerateGrid grid;
-    private GameGrid gameGrid;
-
+    private GenerateGameGrid gameGrid;
 
 
     @PostMapping("/validateGrid")
     public boolean valideGrid(@RequestBody Grid grid) {
         ArrayList clone = gameGrid.getClone();
         boolean res = true;
-        System.out.println("------- test grid -------");
+        System.out.println( "------- test grid -------" );
         for (int i = 0; i < grid.getArrayList().size(); i++) {
             String crtClient = grid.getArrayList().get( i ).toString();
             String crtGrid = clone.get( i ).toString();
-            System.out.println(crtClient + " " + crtGrid);
+            System.out.println( crtClient + " " + crtGrid );
             if (crtClient.equals( "?" ) || !crtClient.equals( crtGrid )) res = false;
         }
 
-        System.out.println(res);
+        System.out.println( res );
         return res;
     }
 
@@ -49,7 +48,7 @@ class FirstController {
     public ArrayList<Integer> newEasyGrid() {
 
         grid = new GenerateGrid();
-        gameGrid = new GameGrid( grid );
+        gameGrid = new GenerateGameGrid( grid );
         grid.generateGrid();
 
 
@@ -62,7 +61,7 @@ class FirstController {
     public ArrayList<Integer> newMediumGrid() {
 
         grid = new GenerateGrid();
-        gameGrid = new GameGrid( grid );
+        gameGrid = new GenerateGameGrid( grid );
 
         this.grid.generateGrid();
 
@@ -76,7 +75,7 @@ class FirstController {
     public ArrayList<Integer> newGrid() {
 
         grid = new GenerateGrid();
-        gameGrid = new GameGrid( grid );
+        gameGrid = new GenerateGameGrid( grid );
 
         this.grid.generateGrid();
 
@@ -90,7 +89,7 @@ class FirstController {
     public ArrayList<Integer> gameGrid() {
 
         grid = new GenerateGrid();
-        gameGrid = new GameGrid( grid );
+        gameGrid = new GenerateGameGrid( grid );
 
         this.grid.generateGrid();
 
@@ -130,61 +129,58 @@ class FirstController {
     }
 
 
-
-
-
     /************************  Démineur  ************************/
 
 
-
-
-
+    @CrossOrigin(origins = "*")
     @RestController
     @RequestMapping("/demineur")
     public class DemineurController {
-
-        private ClasseDemineur grille;
-        /*Argument dans ClasseDemineur() :
+        /*Argument dans Demineur() :
          * 1 : niveau facile 8 x 8 10 mines
          * 2 : nvieau moyen 16 x 16 40 mines
          * 3 : niveau difficile 30 x 16 99 mines*/
 
-
         @GetMapping("/niveauFacile")
-        public String Facile() {
+
+        public String[][] Facile() {
 
 
-           this.grille = new ClasseDemineur( 1 );
+            Demineur facile = new Demineur( 1 );
 
-            return  this.grille.genererGrille();
+            return facile.affichage();
         }
-
 
         @GetMapping("/niveauMoyen")
-        public String Moyen() {
 
-            /*Argument dans ClasseDemineur() :
+        public String[][] Moyen() {
+
+            /*Argument dans Demineur() :
              * 1 : niveau facile 8 x 8 10 mines
              * 2 : nvieau moyen 16 x 16 40 mines
              * 3 : niveau difficile 30 x 16 99 mines*/
 
-            this.grille = new ClasseDemineur( 2 );
+            Demineur moyen = new Demineur( 2 );
 
-            return  this.grille.genererGrille();
+            return moyen.affichage();
         }
-
 
         @GetMapping("/niveauDifficile")
-        public String Difficile() {
 
-            /*Argument dans ClasseDemineur() :
+        public String[][] Difficile() {
+
+            /*Argument dans Demineur() :
              * 1 : niveau facile 8 x 8 10 mines
              * 2 : nvieau moyen 16 x 16 40 mines
              * 3 : niveau difficile 30 x 16 99 mines*/
 
-            this.grille = new ClasseDemineur( 3 );
+            Demineur difficile = new Demineur( 3 );
 
-            return  this.grille.genererGrille();
+            return difficile.affichage();
         }
+
+
     }
 }
+
+

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 
-public class GameGrid {
+public class GenerateGameGrid {
 
     private ArrayList <Integer> clone;
     private ArrayList<Integer> grid;
@@ -16,7 +16,7 @@ public class GameGrid {
 
     // Constructor
 
-    public GameGrid (  GenerateGrid e ) {
+    public GenerateGameGrid(GenerateGrid e ) {
         this.clone = e.generateGrid();
         this.grid = new ArrayList<>(  );
         this.solution = new ArrayList<>(  );

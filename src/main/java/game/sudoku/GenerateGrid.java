@@ -1,7 +1,6 @@
 
 package game.sudoku;
 
-import game.sudoku.MethodSudoku;
 
 import java.util.ArrayList;
 

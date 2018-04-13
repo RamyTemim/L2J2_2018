@@ -20,7 +20,5 @@ public class Grid {
         return arrayList;
     }
 
-    public void setArrayList(ArrayList arrayList) {
-        this.arrayList = arrayList;
-    }
+
 }
