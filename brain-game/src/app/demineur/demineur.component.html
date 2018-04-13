@@ -5,6 +5,16 @@
 
 <!-- chronometre-->
   <app-compteur></app-compteur>
+  <button (click)="getLevelEasy();">niveau facile</button>
+  <button (click)="getLevelMedium();">niveau moyen</button>
+  <button (click)="getLevelHard();">niveau difficle</button>
+
+  <div *ngFor="let case of Cases">
+    {{case}}
+  </div>
+
+  <!--<div><span>id: </span>{{Case.id}}</div>
+  <div><span>valeur: </span>{{Case.valeur}}</div>-->
 
 </section>
 

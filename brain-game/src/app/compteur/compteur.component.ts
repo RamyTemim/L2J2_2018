@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./compteur.component.css']
 })
 export class CompteurComponent {
+
+  public listLevel =["Facile", "Moyen", "Difficile"];
+
   public minute = 0;
   public seconde = 0;
   public compteur: any;
+
   constructor() {
   }
   start() {

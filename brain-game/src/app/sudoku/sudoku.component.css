@@ -1,4 +1,4 @@
-body {
+/*body {
   width: 82%;
   margin-left: 18%;
   position: right;
@@ -7,11 +7,26 @@ body {
   border-radius: 20px;
   /*border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;*/
-  margin-bottom: 100px;
+ /* margin-bottom: 100px;
   margin-top: 2px;
   font-family : Helvetica, Arial, sans-serif;
 
+}*/
+
+body {
+  width: 82%;
+  margin-left: 18%;
+  position: right;
+  position: absolute;
+  background-color: #F5BA5D;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  margin-top: 2px;
+  font-family : Helvetica, Arial, sans-serif;
+  padding-bottom: 20%;
+
 }
+
 
 h1 {
 
@@ -28,7 +43,7 @@ h1 {
   border-width: 1px;
   background-color: #A9D0F5;
   width: 60%;
-  padding: 20px 30px 10px 30px;
+  padding: 20px 30px 350px 30px;
   margin: auto;
   margin-bottom: 50px;
 
@@ -43,7 +58,6 @@ h1 {
   background-color: #A9D0F5;
   border-style: solid;
   border-color: #F5BA5D;
-  border-bottom-right-radius: 20px;
 }
 
 button {

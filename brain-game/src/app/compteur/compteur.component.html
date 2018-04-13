@@ -5,7 +5,7 @@
   <p>0{{minute}} : {{seconde}}</p>
 </div>
 
-<button (click)="start()" (click)="hide = !hide" *ngIf="!hide" class="jouer" id="btnNewGrid">JOUER</button>
+<button (click)="start()" (click)="hide = !hide" *ngIf="!hide" class="jouer">JOUER</button>
 <button (click)="stop()" (click)="hide = !hide" *ngIf="hide" class="jouer" id="btnValide">Valider</button>
 <br>
 <button (click)="stop()" id="btnSolution" class="b">Solution</button>
@@ -13,9 +13,9 @@
 <button id="btnNewGrid" class="b" (click)="reset()">Nouvelle Grille</button>
   <br>
   <select title="Niveau" id="levelSudoku" class="b">
-    <option name="NewEasyGrid">Facile</option>
-    <option name="NewMediumGrid">Moyen</option>
-    <option name="NewHardGrid">Difficile</option>
+    <option *ngFor="let lvl of listLevel">
+      {{lvl}}
+    </option>
   </select>
   <br>
 
