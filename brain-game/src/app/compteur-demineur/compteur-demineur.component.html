@@ -1,0 +1,36 @@
+<body>
+
+<div class="bouton">
+  <div class="compteur">
+    <p>0{{minute}} : {{seconde}}</p>
+  </div>
+
+  <p class="p-lvl">Niveaux :</p>
+  <select title="Niveau" class="b">
+    <option *ngFor="let lvl of listLevel">
+      {{lvl}}
+    </option>
+  </select>
+  <br>
+  <button (click)="start()" (click)="hide = !hide" *ngIf="!hide" class="jouer">JOUER</button>
+  <button (click)="stop()" (click)="hide = !hide" *ngIf="hide" class="jouer">Valider</button>
+  <br>
+  <button (click)="stop()" class="b">Solution</button>
+  <br>
+  <button class="b" (click)="reset()">Nouvelle Grille</button>
+  <br>
+  <button (click)="getLevelEasy();">niveau facile</button>
+  <br>
+  <button (click)="getLevelMedium();">niveau moyen</button>
+  <br>
+  <button (click)="getLevelHard();">niveau difficle</button>
+  <br>
+
+</div>
+
+<div *ngFor="let case of Cases" class="demineur">
+  {{case}}
+</div>
+
+
+</body>

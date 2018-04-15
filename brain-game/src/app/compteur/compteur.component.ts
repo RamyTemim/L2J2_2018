@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './compteur.component.html',
   styleUrls: ['./compteur.component.css']
 })
-export class CompteurComponent {
+export class CompteurComponent implements OnInit {
 
   public listLevel =["Facile", "Moyen", "Difficile"];
 
@@ -13,8 +13,8 @@ export class CompteurComponent {
   public seconde = 0;
   public compteur: any;
 
-  constructor() {
-  }
+  constructor() { }
+
   start() {
     if (this.compteur === undefined) {
       this.compteur = setInterval(() => {
@@ -28,11 +28,13 @@ export class CompteurComponent {
           }
         }
         , 1000);
+      console.log("Timer Start !");
     }
   }
   stop() {
     clearInterval(this.compteur);
     this.compteur = undefined;
+    console.log("Timer  Stop !");
   }
 
   reset(){
@@ -40,6 +42,13 @@ export class CompteurComponent {
     this.seconde = 0;
     this.minute = 0;
     this.compteur = undefined;
+    console.log("Timer Reset !");
+    console.log("New Grid !")
+  }
+
+
+
+  ngOnInit() {
   }
 
 }

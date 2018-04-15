@@ -28,7 +28,7 @@ h1 {
   border-width: 1px;
   background-color: #A9D0F5;
   width: 60%;
-  padding: 20px 30px 350px 30px;
+  padding: 20px 30px 300px 30px;
   margin: auto;
   margin-bottom: 50px;
 
@@ -50,38 +50,4 @@ button {
   cursor: pointer;
   width: 100px;
 }
-
-.grille {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.grille input {
-  font-size: 25px;
-  border-style: solid;
-  text-align: center;
-  margin: 0px;
-  background-color: darkgray;
-
-}
-
-/*.grille1 {
-  margin-bottom: 10px;
-}
-
-.grille2 {
-  margin-bottom: 10px;
-}
-
-.grille3 {
-  margin-bottom: 10px;
-}
-
-.carre1 {
-  margin-right: 10px;
-}
-
-.carre2{
-  margin-right: 10px;
-}*/
 

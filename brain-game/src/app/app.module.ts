@@ -13,6 +13,7 @@ import { SudokuComponent } from './sudoku/sudoku.component';
 import { DemineurComponent} from './demineur/demineur.component';
 import { TeamComponent } from './team/team.component';
 import { CompteurComponent } from './compteur/compteur.component';
+import { CompteurDemineurComponent } from './compteur-demineur/compteur-demineur.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CompteurComponent } from './compteur/compteur.component';
     DemineurComponent,
     TeamComponent,
     CompteurComponent,
+    CompteurDemineurComponent,
   ],
   imports: [
     BrowserModule,

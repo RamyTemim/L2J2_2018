@@ -1,4 +1,4 @@
-<body>
+<!--<body>
 
 <div class="bouton">
 <div class="compteur">
@@ -17,6 +17,36 @@
       {{lvl}}
     </option>
   </select>
+  <br>
+
+</div>
+
+
+</body>-->
+
+
+
+
+<body>
+
+<div class="bouton">
+  <div class="compteur">
+    <p>0{{minute}} : {{seconde}}</p>
+  </div>
+
+  <p class="p-lvl">Niveaux :</p>
+  <select title="Niveau" class="b">
+    <option *ngFor="let lvl of listLevel">
+      {{lvl}}
+    </option>
+  </select>
+  <br>
+  <button (click)="start()" (click)="hide = !hide" *ngIf="!hide" class="jouer">JOUER</button>
+  <button (click)="stop()" (click)="hide = !hide" *ngIf="hide" class="jouer" id="btnValide">Valider</button>
+  <br>
+  <button (click)="stop()" id="btnSolution" class="b">Solution</button>
+  <br>
+  <button id="btnNewGrid" class="b" (click)="reset()">Nouvelle Grille</button>
   <br>
 
 </div>

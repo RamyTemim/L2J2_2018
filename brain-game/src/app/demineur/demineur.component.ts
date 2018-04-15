@@ -1,6 +1,6 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import 'rxjs/add/operator/map';
+//import 'rxjs/add/operator/map';
 
 //import {Case} from "../case";
 
@@ -11,24 +11,27 @@ import 'rxjs/add/operator/map';
 })
 
 //Mettre l'injectable car on a importer le module HttpClient
-@Injectable()
+//@Injectable()
 export class DemineurComponent implements OnInit {
 
-  public Cases=[];
+  //public Cases=[];
 
   //Crée la grille du demineur
   //grille
 
-  data: any = {};
+  //data: any = {};
 
 
 
 
+/*
 
+  constructor ()  {}
   //Constructeur du httpClient
   constructor(private httpClient: HttpClient) {}
 
   //Permet de récupérer depuis le back-end les données des différents niveaux
+  //Récupère le niveau facile
   getLevelEasy(){
     this.httpClient
       .get<any[]>('http://localhost:8080/demineur/niveauFacile')
@@ -40,6 +43,7 @@ export class DemineurComponent implements OnInit {
       )
   }
 
+  //Récupère le niveau moyen
   getLevelMedium(){
     this.httpClient
       .get<any[]>('http://localhost:8080/demineur/niveauMoyen')
@@ -51,6 +55,7 @@ export class DemineurComponent implements OnInit {
       )
   }
 
+  //Récupère le niveau difficile
   getLevelHard(){
     this.httpClient
       .get<any[]>('http://localhost:8080/demineur/niveauDifficile')
