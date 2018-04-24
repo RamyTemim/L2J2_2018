@@ -34,9 +34,6 @@ public class MethodSudokuTest {
 
 
 
-
-
-
     @Test
     public void availableLine() {
 
@@ -88,41 +85,6 @@ public class MethodSudokuTest {
 
     }
 
-
-
-
-
-    @Test
-    public void checkNumber() {
-
-        grille.setGrid( tab );
-        boolean a = grille.checkNumber( 0, 1 );
-        boolean b = grille.checkNumber( 16, 5 );
-
-        Assert.assertTrue( a );
-        Assert.assertFalse( b );
-
-        System.out.println( "Test number :" + " " + "true?" + a + " " + "false?" + b );
-
-    }
-
-
-
-
-
-    @Test
-    public void isPossible() {
-
-        grille.setGrid( tab );
-        boolean a = grille.isPossible( 15 );
-
-
-        Assert.assertTrue( a );
-
-
-        System.out.println( "Test Possible :" + " " + "true?" + a + " " + "false?"  );
-
-    }
 
 
 

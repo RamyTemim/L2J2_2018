@@ -3,15 +3,11 @@ package game.sudoku;
 import java.util.ArrayList;
 
 
-
-
-
 public class GenerateGameGrid {
 
     private ArrayList <Integer> clone;
     private ArrayList<Integer> grid;
     private ArrayList<Integer> solution;
-    private ArrayList<Integer> restart;
 
 
     // Constructor
@@ -20,23 +16,13 @@ public class GenerateGameGrid {
         this.clone = e.generateGrid();
         this.grid = new ArrayList<>(  );
         this.solution = new ArrayList<>(  );
-        this.restart = new ArrayList<>(  );
     }
 
 
 
-
-
-
     /**
-     *
-     *
      * Initialize game grid
-     *
      * If not empty -> remove grid and initialize
-     *
-     *
-     *
      */
     private void setGG() {
 
@@ -47,24 +33,12 @@ public class GenerateGameGrid {
         for(int i = 0 ; i < 81 ; i++){
             this.grid.add(this.clone.get( i ));
         }
-
-
-
     }
 
 
 
-
-
-
-
-
     /**
-     *
-     *
      * Private method which create a clone of e.generateGrid() in an Arraylist
-     *
-     *
      */
     public ArrayList<Integer> getClone() {
 
@@ -80,44 +54,23 @@ public class GenerateGameGrid {
 
 
 
-
-
-
-
-
-
     /**
-     *
-     *
-     *
-     * Hide between 40 and 50 case of cloned grid
+     * Hide case of cloned grid
      *
      * void method which set the private ArrayList "clone"
-     *
-     *
-     *
      */
-
     public ArrayList<Integer> hideCase(int level) {
-
-
         ArrayList <Integer> listOfIndex = new ArrayList<>( );
         int nb;
 
-
         switch (level) {
-
             case 1 : this.setGG(); nb = 30; break;
             case 2 : this.setGG(); nb = 40; break;
             case 3 : this.setGG(); nb = 50; break;
             default : this.setGG(); nb = 40; break;
-
         }
 
-
-
         for(int i = 0; i < nb ; i++) {
-
 
             int index = (int) (Math.random() * 80);
 
@@ -126,15 +79,9 @@ public class GenerateGameGrid {
             }
 
             listOfIndex.add(index);
-
             grid.set( index , 0);
 
-
         }
-
-
-
-
 
         return this.grid;
     }
@@ -142,51 +89,18 @@ public class GenerateGameGrid {
 
 
 
-
-
-public int getE (int i) {
-
-      return  this.grid.get( i );
-
-}
-
-
-
-
-    /**
-     *
-     * Get back the original game grid (before that player set it)
-     *
-     * @return ArrayList which contains elements of initial game grid
-     *
-     */
-    public ArrayList <Integer> restartGameGrid (){
-
-        for(int i = 0 ; i < 81 ; i++){
-            this.restart.add( this.grid.get( i ) );
-        }
-        return this.restart;
-
+    public int getE (int i) {
+          return  this.grid.get( i );
     }
 
 
-
-
-
-
-
-
+    /***************************** Only used in testSudoku *****************************/
 
 
     /**
-     *
-     *
      * Display game grid : contains hides case -> represent by 0
      *
      * @return String of game grid
-     *
-     *
-     *
      */
     public String displayGameGrid( ) {
 
@@ -210,24 +124,10 @@ public int getE (int i) {
 
 
 
-
-
-
-
-
-
-
     /**
-     *
-     *
-     *
      * Display original grid : the solution
      *
      * @return String of solution grid
-     *
-     *
-     *
-     *
      */
     public String displaySolution( ) {
 
@@ -255,64 +155,32 @@ public int getE (int i) {
 
 
 
-
-
-
-
-
-
-
     /***************************** Different levels for game grid *****************************/
 
 
 
     /**
-     *
      * Method to create a grid at level 1 : easy
-     *
      */
     public void easy () {
-
         grid = hideCase( 1 );
-
     }
 
 
-
-
-
     /**
-     *
      * Method to create a grid at level 2 : medium
-     *
      */
     public void medium () {
-
         grid = hideCase( 2 );
-
     }
-
-
-
-
 
 
     /**
-     *
      * Method to create a grid at level 3 : hard
-     *
      */
     public void hard () {
-
         grid = hideCase( 3 );
-
-
     }
-
-
-
-
-
 
 
 

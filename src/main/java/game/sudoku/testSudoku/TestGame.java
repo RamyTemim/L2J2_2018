@@ -1,4 +1,10 @@
-package game.sudoku.testSudoku;
+
+
+// Ce main n'a pas d'importance pour le projet, il n'est là qu'au titre de test pour vérifier l'affichage des grilles de sudoku
+
+
+
+/*package game.sudoku.testSudoku;
 
 import game.sudoku.GenerateGameGrid;
 import game.sudoku.GenerateGrid;
@@ -44,7 +50,7 @@ public class TestGame {
     }
 }
 
-
+*/
 
 
 

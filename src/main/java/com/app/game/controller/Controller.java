@@ -11,8 +11,7 @@ import game.sudoku.GenerateGrid;
 
 import java.util.ArrayList;
 
-
-
+import static com.sun.activation.registries.LogSupport.log;
 
 
 /************************  Sudoku  ************************/
@@ -106,77 +105,52 @@ class FirstController {
     }
 
 
-    @GetMapping("/RestartGrid")
-    public ArrayList<Integer> restartGrid() {
-
-        return this.gameGrid.restartGameGrid();
-
-    }
-
-
-    @GetMapping("/TestArrayList")
-    public ArrayList<Integer> testArrayList() {
-
-        ArrayList<Integer> ar = new ArrayList<>();
-        ar.add( 5 );
-        ar.add( 2 );
-        ar.add( 4 );
-        ar.add( 1 );
-        ar.add( 8 );
-
-        return ar;
-
-    }
 
 
     /************************  Démineur  ************************/
+
 
 
     @CrossOrigin(origins = "*")
     @RestController
     @RequestMapping("/demineur")
     public class DemineurController {
+
+        private Demineur grilleD;
         /*Argument dans Demineur() :
          * 1 : niveau facile 8 x 8 10 mines
          * 2 : nvieau moyen 16 x 16 40 mines
          * 3 : niveau difficile 30 x 16 99 mines*/
 
+
         @GetMapping("/niveauFacile")
+        public String Facile() {
 
-        public String[][] Facile() {
+            this.grilleD = new Demineur( 1 );
+            return  this.grilleD.genererGrilleArray();
 
-
-            Demineur facile = new Demineur( 1 );
-
-            return facile.affichage();
         }
 
         @GetMapping("/niveauMoyen")
+        public String Moyen() {
 
-        public String[][] Moyen() {
-
-            /*Argument dans Demineur() :
-             * 1 : niveau facile 8 x 8 10 mines
-             * 2 : nvieau moyen 16 x 16 40 mines
-             * 3 : niveau difficile 30 x 16 99 mines*/
-
-            Demineur moyen = new Demineur( 2 );
-
-            return moyen.affichage();
+            this.grilleD = new Demineur( 2 );
+            return  this.grilleD.genererGrilleArray();
         }
 
         @GetMapping("/niveauDifficile")
+        public String Difficile() {
 
-        public String[][] Difficile() {
+            this.grilleD = new Demineur( 3 );
+            return  this.grilleD.genererGrilleArray();
+        }
 
-            /*Argument dans Demineur() :
-             * 1 : niveau facile 8 x 8 10 mines
-             * 2 : nvieau moyen 16 x 16 40 mines
-             * 3 : niveau difficile 30 x 16 99 mines*/
 
-            Demineur difficile = new Demineur( 3 );
 
-            return difficile.affichage();
+        @GetMapping("/devoileGrid")
+        public String devoileCase(@RequestParam("id") int id) {
+
+            return this.grilleD.devoile(id);
         }
 
 

@@ -40,26 +40,6 @@ public class GenerateGameGridTest {
     }
 
 
-    @Test
-    public void restartGameGrid() {
-        GenerateGrid e = new GenerateGrid();
-        GenerateGameGrid test = new GenerateGameGrid( e );
-
-
-        ArrayList<Integer> list = test.hideCase( 0 );
-        ArrayList<Integer> list2 = test.restartGameGrid();
-
-
-
-        boolean a = (list.equals( list2));
-        boolean b = (!(list.equals( list2)));
-
-
-        Assert.assertTrue( a );
-        Assert.assertFalse( b );
-
-    }
-
 
 
 
