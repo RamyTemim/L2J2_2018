@@ -1,0 +1,40 @@
+#h1_header {
+  float: left;
+
+
+  text-align: center;
+  font-size: 35px;
+  text-shadow: 3px 3px 3px black;
+  width: 25%;
+
+
+  margin : 0;
+
+  top: 40px;
+
+  cursor: pointer;
+  color: #F41615;
+  border-color: black;
+  min-width: 25%;
+  left: 200px;
+  position: relative;
+
+}
+
+img{
+  float:left;
+  border-radius: 20px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+header {
+  font-family : Helvetica, Arial, sans-serif;
+  height: 125px;
+  border-radius: 20px;
+
+
+
+}
+
+

@@ -1,0 +1,80 @@
+<body id="body_demineur" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<h1 id="h1_Demineur">Démineur</h1>
+
+
+<section id="jeuDemineur">
+
+
+
+<!--Encadrer ou sera situé le jeu -->
+<section id="demineurContainer" class="jeuDemineur noselect">
+
+
+
+</section>
+
+
+
+<section id="DemineurChrono">
+
+  <!-- chronometre-->
+  <app-compteur-demineur></app-compteur-demineur>
+
+</section>
+
+
+
+</section>
+
+
+
+<section id="regleD">
+  <h3>Règles :</h3>
+
+  <p style="color:darkred">Voici ci-dessus une grille de démineur contenant un certain nombre de mines à vous de la résoudre sans vous faire exploser !!!!</p>
+  <br>
+  <p>Pour mieux comprendre comment jouer voici un résumer des règles du démineur</p>
+  <p>  Lorsque vous cliquez sur une case trois situations sont possible :</p>
+      <ul>
+        <li><strong>1ère situation</strong> : la case est vide -> il n'y a donc pas de mines sur l'une des huit cases qui l'entourent,
+            celles-ci seront dévoilées et si l'une d'entre elle est vide il se passera la même chose et ainsi de suite jusqu'à tomber sur une case contenant
+            un nombre (elle sera dévoilée) ou une mine (elle restera cachée).</li>
+        <li><strong>2ème situation</strong> : la case contient un nombre -> celui-ci indique le nombre de mines situées sur les huits cases adjacentes,
+            la case est alors dévoilée et uniquement celle-ci.</li>
+        <li><strong>3ème situation</strong> : la case contient une mine -> vous avez perdu, toutes les mines de la grille sont dévoilées.</li>
+        <br><br>
+        <li ><em><strong style="color: #F41615">Information importante :</strong></em><ul>
+          <li>Il se peut qu'après un clic sur une case vide, toutes les cases vide indirectement adjacentes à celle cliquée ne soient pas dévoilées...</li>
+          <li><mark>Pas de soucis</mark> car dans ce cas vous savez que toutes les cases adjacentes à une case vide ne contiennent pas de mines</li>
+          <li>Vous ne prendrez donc aucun risque en cliquant dessus :)</li>
+          <li>Mais <em style="color: #F41615">ATTENTION</em> uniquement celles qui touchent directement la case vide dévoilée ne comportent pas de risque (i.e celles en : haut/bas; digonale; droite/gauche) </li>
+
+
+        </ul></li>
+      </ul>
+
+
+
+  <p style="color:darkred">Pour résoudre nos grilles de jeu vous devrez faire bien attention au contenu de chaque case pour deviner petit à petit où sont cacher toutes les mines </p>
+
+
+
+  <h3>Commandes :</h3>
+
+
+  <ul title="Commandes pour les cases">
+    <li><mark>Clique sur une case :</mark>dévoile les éléments adjacents à la case</li>
+    <li><mark>Clique droit une première fois :</mark> permet de placer un drapeau sur une case</li>
+    <li><mark>Clique droit une deuxième fois :</mark> permet de retirer le drapeau de la case</li>
+  </ul>
+
+  <ul title="Commandes pour les boutons">
+    <li>Pour lancer le chrono lors de la première partie vous devez cliquer sur "JOUER", ensuite il se lancera automatiquement à chaque début de partie et le bouton "JOUER" disparaîtra</li>
+    <li>Bouton "valider" -> affiche un message indiquant si vous avez trouver toutes les mines (et stop le chrono) : pour cela un drapeau doit être placé sur chacune d'entre elles</li>
+    <li>Bouton "solution" -> affiche la solution de la grille et stop le chrono</li>
+    <li>Bouton "nouvelle grille" -> affiche une nouvelle grille jouable (il est possible de choisir un niveau différent avant de cliquer dessus)</li>
+  </ul>
+
+  <h2 style="color: darkblue">Bonne chance !!!!</h2>
+</section>
+</body>

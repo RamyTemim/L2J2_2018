@@ -1,0 +1,21 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: darkred;
+  color: white;
+  width: 100%;
+  font-family : Helvetica, Arial, sans-serif;
+
+}
+
+li {
+  display: inline;
+  margin: 20px;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

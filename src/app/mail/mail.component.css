@@ -1,0 +1,11 @@
+body {
+  width: 995px;
+  height: 250px;
+  position: absolute;
+  background-color: rosybrown;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  font-family : Helvetica, Arial, sans-serif;
+  text-align: justify-all;
+  left : 300px;
+}

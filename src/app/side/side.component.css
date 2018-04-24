@@ -1,0 +1,24 @@
+nav {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #F5BA5D;
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  color: black;
+  border-radius: 20px;
+
+
+}
+
+h2 {
+  margin-left: 9px;
+
+}
+
+li:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+
+}
+

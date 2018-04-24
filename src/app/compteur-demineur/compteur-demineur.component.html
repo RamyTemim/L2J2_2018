@@ -1,0 +1,31 @@
+<body>
+
+<div class="bouton">
+  <div class="compteur">
+    <p>0{{minute}} : {{seconde}}</p>
+  </div>
+
+
+
+  <br>
+  <button (click)="start()" (click)="hide = !hide" *ngIf="!hide" class="jouer" >JOUER</button>
+  <br>
+  <button (click)="stop()" id="bValide" class="jouer">Valider</button>
+  <br>
+  <button (click)="stop()" id="bSolution" class="b">Solution</button>
+  <br>
+  <button class="b" id="bNewGrid"(click)=" restart()">Nouvelle Grille</button>
+  <br>
+
+
+  <select title="Niveau" id="levelDemineur">
+    <option name="niveauFacile">Facile</option>
+    <option name="niveauMoyen">Moyen</option>
+    <option name="niveauDifficile">Difficile</option>
+  </select>
+
+</div>
+
+
+
+</body>

@@ -1,0 +1,128 @@
+
+
+body {
+  width: 1220px;
+  height: 1000px;
+  background-color: #A9D0F5;
+  border-radius: 20px;
+  font-family : Helvetica, Arial, sans-serif;
+  left: 200px;
+  margin: 0;
+  position: absolute;
+  font-size: small;
+
+}
+
+
+p {
+  margin-left: 5px;
+}
+
+h1 {
+
+  margin-left: 5px;
+  font-size: 45px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-right: 300px;
+  padding-bottom: 30px;
+}
+
+
+
+.image {
+  position: absolute;
+  margin : 0;
+  left : 70px;
+
+}
+
+
+.image:hover{
+  width: 155px;
+  height: 155px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: white;
+
+}
+
+.img2 {
+  float:left;
+}
+
+#resumeS {
+  background-color: #F5BA5D;
+  border-radius: 20px;
+  width: 1200px;
+  height: 150px;
+  margin : 0;
+  left : 50px;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  cursor: pointer;
+  width: 90px;
+  height: 35px;
+  border-radius: 10px;
+  margin-right: 100px;
+  border-color: #A9D0F5;
+  border-style: solid;
+}
+
+button:hover {
+  border-color: #244F7E;
+}
+
+
+#resumeS p {
+
+  margin : 0;
+  left: 40px;
+}
+
+.detail {
+  top: 300px;
+  width: 1000px;
+  position: absolute;
+  left: 200px;
+}
+
+.detail p {
+  font-size: 20px;
+}
+
+#imgSudoku{
+  top : 158px;
+  left : 0;
+}
+
+#imgDemineur{
+  top : 500px;
+  left : 0;
+}
+
+#resumeD{
+  position: inherit;
+  margin : 0;
+  left : 150px;
+  background-color: #F5BA5D;
+  border-radius: 0 20px 20px 0;
+  width: 1050px;
+  height: 150px;
+  text-align: center;
+  top : 500px;
+}
+
+#resumeD p {
+
+  margin : 0;
+  left: 40px;
+}
+
+.resumer{
+  display : inline-block;
+
+}
